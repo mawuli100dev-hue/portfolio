@@ -48,17 +48,9 @@ export default function RegisterPage() {
 
     try {
       await register({
-        name: formData.name,
         email: formData.email,
         password: formData.password,
         role: "admin",
-        bio: "",
-        whatsapp: "",
-        github: "",
-        linkedin: "",
-        twitter: "",
-        instagram: "",
-        facebook: "",
         emailVerified: false,
       });
       router.push("/login?registered=true");
