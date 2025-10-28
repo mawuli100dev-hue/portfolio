@@ -1,12 +1,21 @@
 "use client";
 
-import Hero from "./components/sections/Hero";
-import Blog from "./components/sections/Blogs";
+import Welcome from "./components/sections/Welcome";
+import About from "./components/sections/About";
+import Context from "./components/sections/Context";
+import Education from "./components/sections/Education";
+import Experience from "./components/sections/Experience";
+import Achievement1 from "./components/sections/Achievement1";
+import Achievement2 from "./components/sections/Achievement2";
+import Achievement3 from "./components/sections/Achievement3";
 import Skills from "./components/sections/Skills";
-import Projects from "./components/sections/Projects";
+import Network from "./components/sections/Network";
+import Resources from "./components/sections/Resources";
+import Publications from "./components/sections/Publications";
+import PersonalStrengths from "./components/sections/PersonalStrengths";
+import ServiceOffer from "./components/sections/ServiceOffer";
 import Contact from "./components/sections/Contacts";
 import Layout from "./components/sections/layout";
-import Certificates from "./components/sections/Certificates";
 import blurData from "@/public/img/blur-data.json";
 import {
   FaLinkedin,
@@ -45,7 +54,27 @@ export default function Home() {
   return (
     <div>
       <Layout>
-        <Hero />
+        {/* Mot de bienvenue */}
+        <Welcome />
+        
+        {/* Qui suis-je ? */}
+        <About />
+        
+        {/* Contexte et enjeux */}
+        <Context />
+        
+        {/* Parcours universitaire/formation */}
+        <Education />
+        
+        {/* Parcours d'expériences */}
+        <Experience />
+        
+        {/* 3 Réalisations significatives */}
+        <Achievement1 />
+        <Achievement2 />
+        <Achievement3 />
+        
+        {/* Synthèse des compétences */}
         <div className="relative min-h-screen">
           <div className="absolute inset-0 w-full h-full -z-10">
             <Image
@@ -61,11 +90,26 @@ export default function Home() {
             <div className="absolute inset-0 bg-black opacity-50"></div>
           </div>
           <Skills />
-          <Projects />
         </div>
-        <Blog />
-        <Certificates />
+        
+        {/* Réseaux professionnels */}
+        <Network />
+        
+        {/* Autres ressources */}
+        <Resources />
+        
+        {/* Publications et communications */}
+        <Publications />
+        
+        {/* Atouts personnels */}
+        <PersonalStrengths />
+        
+        {/* Offre d'intervention */}
+        <ServiceOffer />
+        
+        {/* Contact */}
         <Contact />
+        
         <footer className="bg-gray-900 text-white py-8">
           <div className="container mx-auto px-4">
             <div className="flex justify-center space-x-6">
