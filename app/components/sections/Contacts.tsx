@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Send } from "lucide-react";
+import { Mail, Send } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import Image from "next/image";
 import blurData from "@/public/img/blur-data.json";
@@ -62,7 +62,11 @@ export default function Contact() {
         <div className="absolute inset-0 bg-black opacity-50"></div>
       </div>
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center">Me Contacter</h2>
+        
+        <div className="flex items-center justify-center mb-8">
+          <span className="bg-gradient-to-br from-[#FFAA00] to-[#FFB84D] rounded-full p-3 mr-4 shadow-lg"><Mail className="w-6 h-6 text-[#F5F5F5]" /></span>
+          <h2 className="text-3xl font-bold text-[#F5F5F5]">Me Contacter</h2>
+        </div>
         <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
           <div className="mb-4">
             <label

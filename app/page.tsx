@@ -5,13 +5,9 @@ import About from "./components/sections/About";
 import Context from "./components/sections/Context";
 import Education from "./components/sections/Education";
 import Experience from "./components/sections/Experience";
-import Achievement1 from "./components/sections/Achievement1";
-import Achievement2 from "./components/sections/Achievement2";
-import Achievement3 from "./components/sections/Achievement3";
+import achievements from "./components/sections/Achievement";
 import Skills from "./components/sections/Skills";
-import Network from "./components/sections/Network";
 import Resources from "./components/sections/Resources";
-import Publications from "./components/sections/Publications";
 import PersonalStrengths from "./components/sections/PersonalStrengths";
 import ServiceOffer from "./components/sections/ServiceOffer";
 import Contact from "./components/sections/Contacts";
@@ -27,29 +23,10 @@ import {
 } from "react-icons/fa";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import portfolioService from "./application/services/portfolio.service";
-import { PortfolioInfo } from "./application/models/portfolio";
+import Achievements from "./components/sections/Achievements";
 
 export default function Home() {
-  const [portfolioInfo, setPortfolioInfo] = useState<PortfolioInfo | null>(
-    null
-  );
 
-  useEffect(() => {
-    const fetchPortfolioInfo = async () => {
-      try {
-        const data = await portfolioService.getPortfolioInfo();
-        setPortfolioInfo(data);
-      } catch (error) {
-        console.error(
-          "Erreur lors de la récupération des informations du portfolio:",
-          error
-        );
-      }
-    };
-
-    fetchPortfolioInfo();
-  }, []);
 
   return (
     <div>
@@ -70,9 +47,7 @@ export default function Home() {
         <Experience />
         
         {/* 3 Réalisations significatives */}
-        <Achievement1 />
-        <Achievement2 />
-        <Achievement3 />
+        <Achievements />
         
         {/* Synthèse des compétences */}
         <div className="relative min-h-screen">
@@ -93,13 +68,13 @@ export default function Home() {
         </div>
         
         {/* Réseaux professionnels */}
-        <Network />
+        {/* <Network /> */}
         
         {/* Autres ressources */}
         <Resources />
         
         {/* Publications et communications */}
-        <Publications />
+        {/* <Publications /> */}
         
         {/* Atouts personnels */}
         <PersonalStrengths />
@@ -113,66 +88,54 @@ export default function Home() {
         <footer className="bg-gray-900 text-white py-8">
           <div className="container mx-auto px-4">
             <div className="flex justify-center space-x-6">
-              {portfolioInfo?.socialLinks.linkedin && (
                 <a
-                  href={portfolioInfo.socialLinks.linkedin}
+                  href=""
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-blue-500 transition-colors"
                 >
                   <FaLinkedin size={30} />
                 </a>
-              )}
-              {portfolioInfo?.socialLinks.github && (
                 <a
-                  href={portfolioInfo.socialLinks.github}
+                  href=""
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-gray-400 transition-colors"
                 >
                   <FaGithub size={30} />
                 </a>
-              )}
-              {portfolioInfo?.socialLinks.whatsapp && (
                 <a
-                  href={`https://wa.me/+${portfolioInfo.socialLinks.whatsapp}`}
+                  href="https://wa.me/+"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-green-500 transition-colors"
                 >
                   <FaWhatsapp size={30} />
                 </a>
-              )}
-              {portfolioInfo?.socialLinks.twitter && (
                 <a
-                  href={portfolioInfo.socialLinks.twitter}
+                  href=""
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-blue-400 transition-colors"
                 >
                   <FaTwitter size={30} />
                 </a>
-              )}
-              {portfolioInfo?.socialLinks.instagram && (
                 <a
-                  href={portfolioInfo.socialLinks.instagram}
+                  href=""
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-pink-500 transition-colors"
                 >
                   <FaInstagram size={30} />
                 </a>
-              )}
-              {portfolioInfo?.socialLinks.facebook && (
                 <a
-                  href={portfolioInfo.socialLinks.facebook}
+                  href=""
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-blue-600 transition-colors"
                 >
                   <FaFacebook size={30} />
                 </a>
-              )}
             </div>
             <div className="text-center mt-4">
               <p>&copy; {new Date().getFullYear()} - Tous droits réservés</p>

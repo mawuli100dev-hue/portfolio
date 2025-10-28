@@ -1,6 +1,4 @@
 import { Briefcase, Calendar, MapPin, ExternalLink, TrendingUp } from "lucide-react";
-import Image from "next/image";
-import blurData from "@/public/img/blur-data.json";
 
 export default function Experience() {
   const experiences = [
@@ -67,31 +65,20 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="relative py-20 -mt-16"
-    >
-      <div className="absolute inset-0 w-full h-full -z-10">
-        <Image
-          src="/img/1.png"
-          alt="Background"
-          fill
-          placeholder="blur"
-          priority
-          blurDataURL={blurData["1.png"]}
-          className="object-cover"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-      </div>
+    <section id="experience" className="relative py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center">Parcours d'expériences</h2>
+        <h2 className="text-3xl font-bold mb-8 text-center text-black">Parcours d'expériences</h2>
         
         <div className="max-w-6xl mx-auto">
           <div className="space-y-8">
             {experiences.map((exp, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+              <div 
+                key={index} 
+                className="bg-white rounded-lg shadow-2xl p-6 transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 border border-gray-100"
+              >
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center">
-                    <div className="bg-[#FFAA00] rounded-full p-3 mr-4">
+                    <div className="bg-[#FFAA00] rounded-full p-3 mr-4 shadow-lg">
                       <Briefcase className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -109,31 +96,34 @@ export default function Experience() {
                     href={exp.lien}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#FFAA00] hover:text-[#11101D] transition-colors duration-200"
+                    className="text-[#FFAA00] hover:text-[#11101D] transition-colors duration-200 transform hover:scale-110"
                   >
                     <ExternalLink className="w-5 h-5" />
                   </a>
                 </div>
                 
                 <div className="mb-4">
-                  <p className="text-gray-700 mb-4">{exp.description}</p>
+                  <p className="text-gray-700 mb-4 leading-relaxed">{exp.description}</p>
                   
-                  <div className="bg-white rounded-lg p-4 mb-4">
+                  <div className="bg-gradient-to-br from-orange-50 to-white rounded-lg p-4 mb-4 border border-orange-100 transform transition-all duration-300 hover:shadow-lg">
                     <div className="flex items-start">
                       <TrendingUp className="w-5 h-5 text-[#FFAA00] mr-2 mt-1 flex-shrink-0" />
                       <div>
                         <h4 className="font-semibold text-[#11101D] mb-1">Valeur ajoutée :</h4>
-                        <p className="text-gray-700 text-sm">{exp.valeur}</p>
+                        <p className="text-gray-700 text-sm leading-relaxed">{exp.valeur}</p>
                       </div>
                     </div>
                   </div>
                   
                   <div>
-                    <h4 className="font-semibold text-[#11101D] mb-2">Principales réalisations :</h4>
-                    <ul className="space-y-1">
+                    <h4 className="font-semibold text-[#11101D] mb-3 flex items-center">
+                      <div className="w-2 h-2 bg-[#FFAA00] rounded-full mr-2"></div>
+                      Principales réalisations :
+                    </h4>
+                    <ul className="space-y-2">
                       {exp.details.map((detail, idx) => (
-                        <li key={idx} className="text-gray-700 text-sm flex items-start">
-                          <span className="w-2 h-2 bg-[#FFAA00] rounded-full mr-2 mt-2 flex-shrink-0"></span>
+                        <li key={idx} className="text-gray-700 text-sm flex items-start leading-relaxed">
+                          <span className="w-2 h-2 bg-[#FFAA00] rounded-full mr-3 mt-2 flex-shrink-0"></span>
                           {detail}
                         </li>
                       ))}
@@ -144,20 +134,20 @@ export default function Experience() {
             ))}
           </div>
           
-          <div className="mt-12 bg-[#11101D] text-white rounded-lg p-8">
-            <h3 className="text-2xl font-semibold mb-6 text-center">Synthèse de mon parcours</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-[#FFAA00] mb-2">4+</div>
-                <p className="text-gray-300">Années d'expérience</p>
+          <div className="mt-12 bg-white rounded-lg shadow-2xl p-8 transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 border border-gray-100">
+            <h3 className="text-2xl font-semibold mb-8 text-center text-[#11101D]">Synthèse de mon parcours</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center bg-gradient-to-br from-orange-50 to-white rounded-lg p-6 border border-orange-100 transform transition-all duration-300 hover:shadow-lg">
+                <div className="text-3xl font-bold text-[#FFAA00] mb-3">4+</div>
+                <p className="text-gray-700 font-semibold">Années d'expérience</p>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-[#FFAA00] mb-2">50+</div>
-                <p className="text-gray-300">Projets réalisés</p>
+              <div className="text-center bg-gradient-to-br from-orange-50 to-white rounded-lg p-6 border border-orange-100 transform transition-all duration-300 hover:shadow-lg">
+                <div className="text-3xl font-bold text-[#FFAA00] mb-3">50+</div>
+                <p className="text-gray-700 font-semibold">Projets réalisés</p>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-[#FFAA00] mb-2">15+</div>
-                <p className="text-gray-300">Technologies maîtrisées</p>
+              <div className="text-center bg-gradient-to-br from-orange-50 to-white rounded-lg p-6 border border-orange-100 transform transition-all duration-300 hover:shadow-lg">
+                <div className="text-3xl font-bold text-[#FFAA00] mb-3">15+</div>
+                <p className="text-gray-700 font-semibold">Technologies maîtrisées</p>
               </div>
             </div>
           </div>
