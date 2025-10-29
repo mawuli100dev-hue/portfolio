@@ -1,49 +1,30 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+// Configuration de la police Poppins
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-poppins",
 });
 
 export const metadata: Metadata = {
-  title: "Henoc AMAVIGAN | Portfolio",
+  title: "Hénoc AMAVIGAN | Portfolio",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
     apple: "/favicon.ico",
   },
-  description: "Portfolio de Henoc AMAVIGAN",
+  description:
+    "Portfolio de Hénoc AMAVIGAN - Développeur Fullstack & Data Scientist",
   keywords: [
-    "Henoc AMAVIGAN",
+    "Hénoc AMAVIGAN",
     "Portfolio",
     "Développeur Web",
-    "Développeur Frontend",
-    "Développeur Backend",
     "Développeur Fullstack",
-    "Développeur React",
-    "Développeur Next.js",
-    "Développeur Node.js",
     "Data Scientist",
-    "Machine Learning",
-    "Intelligence Artificielle",
-    "Deep Learning",
-    "Big Data",
-    "Data Engineer",
-    "Data Analyst",
-    "Data Visualization",
-    "Data Mining",
-    "Data Science",
-    "Data Analysis",
-    "Data Engineering",
-    "Data Analytics",
+    // ... vos autres keywords
   ],
 };
 
@@ -53,10 +34,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="fr">
+      {" "}
+      {/* Changé en français */}
+      <body className={`${poppins.variable} font-poppins antialiased`}>
         {children}
       </body>
     </html>

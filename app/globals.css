@@ -2,8 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Définition de la police Poppins comme police par défaut */
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    font-family: var(--font-poppins), system-ui, sans-serif;
+  }
+}
+
+/* Styles globaux pour une meilleure typographie */
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-background text-foreground;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  font-family: var(--font-poppins), system-ui, sans-serif; /* Assurance supplémentaire */
+}
+
+/* Amélioration de la lisibilité avec Poppins */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em; /* Améliore l'apparence avec Poppins */
+}
+
+p {
+  line-height: 1.7; /* Légèrement augmenté pour Poppins */
+  font-weight: 400;
+}
+
+/* Pour les textes en gras avec Poppins */
+strong,
+b {
+  font-weight: 600;
 }
 
 @layer utilities {
@@ -65,14 +101,5 @@ body {
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
   }
 }

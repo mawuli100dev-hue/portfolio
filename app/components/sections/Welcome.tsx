@@ -4,10 +4,7 @@ import blurData from "@/public/img/blur-data.json";
 
 export default function Welcome() {
   return (
-    <section
-      id="welcome"
-      className="relative py-20 -mt-16"
-    >
+    <section id="welcome" className="relative py-20 -mt-16">
       {/* Container pour l'image et le dégradé */}
       <div className="absolute inset-0 w-full h-full -z-10">
         <Image
@@ -20,12 +17,12 @@ export default function Welcome() {
           className="object-cover"
           sizes="100vw"
         />
-        
+
         {/* Overlay noir pour la lisibilité */}
         <div className="absolute inset-0 bg-black opacity-50"></div>
-        
+
         {/* Dégradé blanc TRÈS PROGRESSIF en bas seulement */}
-        <div 
+        <div
           className="absolute bottom-0 left-0 right-0 h-1/3"
           style={{
             background: `linear-gradient(to top, 
@@ -33,7 +30,7 @@ export default function Welcome() {
               rgba(255, 255, 255, 1) 20%,
               
               transparent 100%
-            )`
+            )`,
           }}
         >
           <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-white via-transparent to-transparent"></div>
@@ -53,9 +50,11 @@ export default function Welcome() {
             className="rounded-full shadow-lg relative z-20"
           />
         </div>
-        
+
         <div className="md:w-1/2 text-center md:text-left relative z-20">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Bienvenue</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+            Bienvenue
+          </h1>
           <div className="mb-6">
             <Quote className="w-8 h-8 text-[#FFAA00] mb-2" />
             <p className="text-xl italic text-[#FFAA00] font-semibold">
@@ -63,15 +62,24 @@ export default function Welcome() {
             </p>
           </div>
           <p className="text-lg mb-8 text-gray-200">
-            Je suis ravi de vous accueillir sur mon portfolio professionnel. 
-            Ce document présente mon parcours, mes compétences et mes réalisations 
-            dans le domaine du développement fullstack et de la science des données.
+            Je suis ravi de vous accueillir sur mon portfolio professionnel. Ce
+            document présente mon parcours, mes compétences et mes réalisations
+            dans le domaine du développement fullstack et de la science des
+            données.
           </p>
           <div className="mb-6">
-            <h3 className="text-lg font-semibold mb-2 text-white">Recommandations au lecteur :</h3>
+            <h3 className="text-lg font-semibold mb-2 text-white">
+              Recommandations au lecteur :
+            </h3>
             <ul className="text-sm text-gray-300 space-y-1">
-              <li>• Consultez d'abord la section "Qui suis-je ?" pour une vue d'ensemble</li>
-              <li>• Explorez mes réalisations significatives pour comprendre mon expertise</li>
+              <li>
+                • Consultez d'abord la section "Qui suis-je ?" pour une vue
+                d'ensemble
+              </li>
+              <li>
+                • Explorez mes réalisations significatives pour comprendre mon
+                expertise
+              </li>
               <li>• N'hésitez pas à me contacter pour toute question</li>
             </ul>
           </div>
