@@ -19,7 +19,7 @@ export default function Welcome() {
         />
 
         {/* Overlay noir pour la lisibilité */}
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0 bg-black opacity-60"></div>
 
         {/* Dégradé blanc TRÈS PROGRESSIF en bas seulement */}
         <div

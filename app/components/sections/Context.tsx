@@ -230,8 +230,8 @@ export default function Context() {
               </ul>
             </div>
           </div>
-          <div className="mt-6 p-4 bg-gradient-to-r from-[#FFAA00] to-[#FFB84D] rounded-lg transform transition-all duration-300 hover:shadow-lg">
-            <p className="text-lg font-semibold text-center text-[#11101D]">
+          <div className="mt-6 bg-gradient-to-br from-[#11101D] to-[#1a1835] rounded-lg p-6 text-white transform transition-all duration-300 hover:shadow-lg">
+            <p className="text-lg font-semibold text-center text-white">
               "Je construis aujourd'hui une base solide en fullstack et data
               science pour me spécialiser demain en cybersécurité intelligente"
             </p>

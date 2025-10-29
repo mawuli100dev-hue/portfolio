@@ -1,4 +1,12 @@
-import { User, MapPin, Calendar, Award } from "lucide-react";
+import {
+  User,
+  MapPin,
+  Calendar,
+  Award,
+  Lightbulb,
+  Sparkles,
+  Puzzle,
+} from "lucide-react";
 
 export default function About() {
   return (
@@ -97,6 +105,25 @@ export default function About() {
                   <span className="text-sm text-gray-700">
                     Projets d'innovation technologique
                   </span>
+                </div>
+                <div className="bg-gradient-to-br from-[#11101D] to-[#1a1835] rounded-lg p-6 text-white hover:shadow-lg hover:shadow-[#FFAA00]/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <span className="bg-gradient-to-br from-[#FFAA00] to-[#FFB84D] rounded-full p-3 mr-4 shadow-lg hover:scale-110 transition-transform duration-200">
+                      <Puzzle className="w-6 h-6 text-[#F5F5F5]" />
+                    </span>
+                    <h4 className="text-lg font-semibold text-white">Énigme</h4>
+                  </div>
+                  <p className="text-gray-300 leading-relaxed">
+                    Si l'ingénieur logiciel est plus{" "}
+                    <span className="text-[#FFAA00] font-semibold">
+                      code et programmation
+                    </span>{" "}
+                    que le data scientist, et que le data scientist est plus{" "}
+                    <span className="text-[#FFAA00] font-semibold">
+                      statistiques et analyse
+                    </span>{" "}
+                    que l'ingénieur logiciel, alors qui suis-je ?
+                  </p>
                 </div>
               </div>
             </div>

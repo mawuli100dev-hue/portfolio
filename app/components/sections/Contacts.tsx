@@ -25,15 +25,15 @@ export default function Contact() {
         from_name: formData.name,
         from_email: formData.email,
         message: formData.message,
-        to_name: "Amavigan henoc",
-        to_email: "amaviganhenoc@gmail.com",
+        to_name: "Amavigan ayi",
+        to_email: "amaviganayi1@gmail.com",
       };
 
       await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "",
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "",
+        "service_nlqxmts",
+        "template_1d8borm",
         templateParams,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ""
+        "ogyRlxiX32mzIXwp1"
       );
 
       console.log("Email envoyé avec succès!");
@@ -62,9 +62,10 @@ export default function Contact() {
         <div className="absolute inset-0 bg-black opacity-50"></div>
       </div>
       <div className="container mx-auto px-4">
-        
         <div className="flex items-center justify-center mb-8">
-          <span className="bg-gradient-to-br from-[#FFAA00] to-[#FFB84D] rounded-full p-3 mr-4 shadow-lg"><Mail className="w-6 h-6 text-[#F5F5F5]" /></span>
+          <span className="bg-gradient-to-br from-[#FFAA00] to-[#FFB84D] rounded-full p-3 mr-4 shadow-lg">
+            <Mail className="w-6 h-6 text-[#F5F5F5]" />
+          </span>
           <h2 className="text-3xl font-bold text-[#F5F5F5]">Me Contacter</h2>
         </div>
         <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
