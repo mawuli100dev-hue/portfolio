@@ -5,7 +5,6 @@ import About from "./components/sections/About";
 import Context from "./components/sections/Context";
 import Education from "./components/sections/Education";
 import Experience from "./components/sections/Experience";
-import achievements from "./components/sections/Achievement";
 import Skills from "./components/sections/Skills";
 import Resources from "./components/sections/Resources";
 import PersonalStrengths from "./components/sections/PersonalStrengths";
@@ -22,33 +21,30 @@ import {
   FaFacebook,
 } from "react-icons/fa";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import Achievements from "./components/sections/Achievements";
 
 export default function Home() {
-
-
   return (
     <div>
       <Layout>
         {/* Mot de bienvenue */}
         <Welcome />
-        
+
         {/* Qui suis-je ? */}
         <About />
-        
+
         {/* Contexte et enjeux */}
         <Context />
-        
+
         {/* Parcours universitaire/formation */}
         <Education />
-        
+
         {/* Parcours d'expériences */}
         <Experience />
-        
+
         {/* 3 Réalisations significatives */}
         <Achievements />
-        
+
         {/* Synthèse des compétences */}
         <div className="relative min-h-screen">
           <div className="absolute inset-0 w-full h-full -z-10">
@@ -66,76 +62,76 @@ export default function Home() {
           </div>
           <Skills />
         </div>
-        
+
         {/* Réseaux professionnels */}
         {/* <Network /> */}
-        
+
         {/* Autres ressources */}
         <Resources />
-        
+
         {/* Publications et communications */}
         {/* <Publications /> */}
-        
+
         {/* Atouts personnels */}
         <PersonalStrengths />
-        
+
         {/* Offre d'intervention */}
         <ServiceOffer />
-        
+
         {/* Contact */}
         <Contact />
-        
+
         <footer className="bg-gray-900 text-white py-8">
           <div className="container mx-auto px-4">
             <div className="flex justify-center space-x-6">
-                <a
-                  href=""
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-blue-500 transition-colors"
-                >
-                  <FaLinkedin size={30} />
-                </a>
-                <a
-                  href=""
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-gray-400 transition-colors"
-                >
-                  <FaGithub size={30} />
-                </a>
-                <a
-                  href="https://wa.me/+"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-green-500 transition-colors"
-                >
-                  <FaWhatsapp size={30} />
-                </a>
-                <a
-                  href=""
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-blue-400 transition-colors"
-                >
-                  <FaTwitter size={30} />
-                </a>
-                <a
-                  href=""
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-pink-500 transition-colors"
-                >
-                  <FaInstagram size={30} />
-                </a>
-                <a
-                  href=""
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-blue-600 transition-colors"
-                >
-                  <FaFacebook size={30} />
-                </a>
+              <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-500 transition-colors"
+              >
+                <FaLinkedin size={30} />
+              </a>
+              <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-400 transition-colors"
+              >
+                <FaGithub size={30} />
+              </a>
+              <a
+                href="https://wa.me/+"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-green-500 transition-colors"
+              >
+                <FaWhatsapp size={30} />
+              </a>
+              <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-400 transition-colors"
+              >
+                <FaTwitter size={30} />
+              </a>
+              <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-pink-500 transition-colors"
+              >
+                <FaInstagram size={30} />
+              </a>
+              <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-600 transition-colors"
+              >
+                <FaFacebook size={30} />
+              </a>
             </div>
             <div className="text-center mt-4">
               <p>&copy; {new Date().getFullYear()} - Tous droits réservés</p>

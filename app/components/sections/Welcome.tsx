@@ -58,31 +58,16 @@ export default function Welcome() {
           <div className="mb-6">
             <Quote className="w-8 h-8 text-[#FFAA00] mb-2" />
             <p className="text-xl italic text-[#FFAA00] font-semibold">
-              "Transformer des données complexes en solutions élégantes"
+              "Donner du sens aux données complexes pour créer l'innovation de
+              demain"
             </p>
           </div>
           <p className="text-lg mb-8 text-gray-200">
-            Je suis ravi de vous accueillir sur mon portfolio professionnel. Ce
-            document présente mon parcours, mes compétences et mes réalisations
-            dans le domaine du développement fullstack et de la science des
-            données.
+            Je suis ravi de vous accueillir dans mon univers digital. Je suis
+            Hénoc, développeur fullstack junior et data scientist en formation.
+            Animé par la passion des technologies, je crée des solutions qui
+            allient performance technique et expérience utilisateur remarquable.
           </p>
-          <div className="mb-6">
-            <h3 className="text-lg font-semibold mb-2 text-white">
-              Recommandations au lecteur :
-            </h3>
-            <ul className="text-sm text-gray-300 space-y-1">
-              <li>
-                • Consultez d'abord la section "Qui suis-je ?" pour une vue
-                d'ensemble
-              </li>
-              <li>
-                • Explorez mes réalisations significatives pour comprendre mon
-                expertise
-              </li>
-              <li>• N'hésitez pas à me contacter pour toute question</li>
-            </ul>
-          </div>
           <a
             href="#about"
             className="inline-flex items-center bg-[#FFAA00] text-[#11101D] px-6 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-colors duration-200"
