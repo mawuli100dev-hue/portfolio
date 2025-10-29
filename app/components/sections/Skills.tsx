@@ -1,34 +1,51 @@
-import { Code, Database, TrendingUp, Palette, Cpu, Globe } from "lucide-react";
+import {
+  Code,
+  Database,
+  TrendingUp,
+  Palette,
+  Cpu,
+  Globe,
+  Brain,
+  Settings,
+  FileCode,
+  Cog,
+  Workflow,
+  Cloud,
+} from "lucide-react";
 
 export default function Skills() {
   // Données en dur pour les compétences
   const skills = [
     {
       id: 1,
-      name: "Compétences Fullstack Avancées",
+      name: "Compétences Fullstack",
       category: "Développement",
       elements: [
-        "Next.js & React Ecosystem",
-        "Node.js & Nest.js Backend",
-        "TypeScript Professional",
-        "RESTful & GraphQL APIs",
-        "PostgreSQL & MongoDB",
-        "Docker & Containerization",
-        "Git & GitHub Mastery",
+        "Écosystème Next.js & React",
+        "Backend Node.js & Nest.js",
+        "TypeScript, Java, Python",
+        "APIs RESTful & GraphQL",
+        "PostgreSQL & MySQL",
+        "Docker & Containerisation",
+        "Git & GitHub",
+        "Déploiement Cloud",
+        "Architecture Microservices",
       ],
     },
     {
       id: 2,
-      name: "Expertise Data Science",
+      name: "Compétences Data Science",
       category: "Data Science",
       elements: [
-        "Machine Learning Algorithms",
+        "Algorithmes de Machine Learning",
         "Deep Learning (TensorFlow, Keras)",
-        "Data Analysis with Python",
-        "Statistical Modeling",
-        "Data Visualization",
+        "Analyse de données avec Python/R",
+        "Modélisation statistique",
+        "Visualisation de données",
         "Feature Engineering",
-        "Model Deployment",
+        "Déploiement de modèles",
+        "Traitement de données massives",
+        "Data Mining",
       ],
     },
     {
@@ -36,13 +53,14 @@ export default function Skills() {
       name: "Outils & Méthodologies",
       category: "Productivité",
       elements: [
-        "GitHub Actions CI/CD",
-        "AWS Cloud Services",
-        "Agile/Scrum Methodology",
-        "Jupyter for Data Analysis",
-        "Postman API Testing",
-        "Linux Environment",
-        "VS Code Advanced Usage",
+        "CI/CD GitHub Actions",
+        "Méthodologie Agile/Scrum",
+        "Tests API avec Postman/Rested",
+        "Environnement Linux",
+        "Utilisation avancée VS Code",
+        "Jupyter Notebook",
+        "Optimisation des performances",
+        "Documentation technique",
       ],
     },
     {
@@ -50,13 +68,67 @@ export default function Skills() {
       name: "Compétences Émergentes",
       category: "En Développement",
       elements: [
-        "Apache Kafka Streaming",
-        "Microservices Architecture",
-        "Big Data Technologies",
-        "Cloud Native Development",
-        "MLOps Fundamentals",
-        "Data Pipeline Design",
-        "Cybersecurity Basics",
+        "Streaming Apache Kafka",
+        "Architecture Microservices",
+        "Technologies Big Data",
+        "Développement Cloud Native",
+        "Fondamentaux MLOps",
+        "Conception de pipelines de données",
+        "Bases de la cybersécurité",
+        "Intelligence Artificielle appliquée",
+      ],
+    },
+    {
+      id: 5,
+      name: "Bases de Données",
+      category: "Bases de données",
+      elements: [
+        "PostgreSQL & MySQL",
+        "MongoDB (NoSQL)",
+        "Conception de schémas",
+        "Optimisation de requêtes",
+        "ORM (Prisma, TypeORM)",
+        "Migration de données",
+        "Sécurité des bases de données",
+      ],
+    },
+    {
+      id: 6,
+      name: "Langages & Technologies",
+      category: "Langages",
+      elements: [
+        "TypeScript/JavaScript",
+        "Python/R (Data Science)",
+        "Java (Backend)",
+        "SQL (Bases de données)",
+        "HTML5/CSS3",
+        "Bash/Powershell",
+      ],
+    },
+    {
+      id: 7,
+      name: "Environnement Cloud",
+      category: "Cloud",
+      elements: [
+        "Vercel, Hostinger & Render",
+        "Déploiement continu",
+        "Gestion de domaines",
+        "Services serverless",
+        "Monitoring d'applications",
+      ],
+    },
+    {
+      id: 8,
+      name: "Data Engineering",
+      category: "Data Engineering",
+      elements: [
+        "Processus ETL/ELT",
+        "Pipelines de données",
+        "Apache Kafka",
+        "Data Warehousing",
+        "Nettoyage de données",
+        "Intégration d'APIs",
+        "Qualité des données",
       ],
     },
   ];
@@ -64,45 +136,77 @@ export default function Skills() {
   // Fonction pour obtenir l'icône appropriée selon la catégorie
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case "Frontends":
-        return <Palette className="w-6 h-6 text-[#F5F5F5]" />;
-      case "Backends":
-        return <Code className="w-6 h-6 text-[#F5F5F5]" />;
-      case "Données/IA":
-        return <Database className="w-6 h-6 text-[#F5F5F5]" />;
+      case "Développement":
+        return <Code className="w-6 h-6 text-white" />;
+      case "Data Science":
+        return <Brain className="w-6 h-6 text-white" />;
+      case "Productivité":
+        return <Settings className="w-6 h-6 text-white" />;
+      case "En Développement":
+        return <TrendingUp className="w-6 h-6 text-white" />;
+      case "Bases de données":
+        return <Database className="w-6 h-6 text-white" />;
       case "Langages":
-        return <Cpu className="w-6 h-6 text-[#F5F5F5]" />;
+        return <FileCode className="w-6 h-6 text-white" />;
+      case "Cloud":
+        return <Cloud className="w-6 h-6 text-white" />;
+      case "Data Engineering":
+        return <Workflow className="w-6 h-6 text-white" />;
       default:
-        return <TrendingUp className="w-6 h-6 text-[#F5F5F5]" />;
+        return <Cog className="w-6 h-6 text-white" />;
     }
   };
 
   // Fonction pour obtenir la couleur de la catégorie
   const getCategoryColor = (category: string) => {
     switch (category) {
-      case "Frontends":
+      case "Développement":
         return {
           bg: "from-blue-50 to-white",
           border: "border-blue-100",
           text: "text-blue-700",
         };
-      case "Backends":
-        return {
-          bg: "from-green-50 to-white",
-          border: "border-green-100",
-          text: "text-green-700",
-        };
-      case "Données/IA":
+      case "Data Science":
         return {
           bg: "from-purple-50 to-white",
           border: "border-purple-100",
           text: "text-purple-700",
         };
-      case "Langages":
+      case "Productivité":
+        return {
+          bg: "from-green-50 to-white",
+          border: "border-green-100",
+          text: "text-green-700",
+        };
+      case "En Développement":
         return {
           bg: "from-orange-50 to-white",
           border: "border-orange-100",
           text: "text-orange-700",
+        };
+      case "Bases de données":
+        return {
+          bg: "from-red-50 to-white",
+          border: "border-red-100",
+          text: "text-red-700",
+        };
+      case "Langages":
+        return {
+          bg: "from-indigo-50 to-white",
+          border: "border-indigo-100",
+          text: "text-indigo-700",
+        };
+      case "Cloud":
+        return {
+          bg: "from-cyan-50 to-white",
+          border: "border-cyan-100",
+          text: "text-cyan-700",
+        };
+      case "Data Engineering":
+        return {
+          bg: "from-pink-50 to-white",
+          border: "border-pink-100",
+          text: "text-pink-700",
         };
       default:
         return {
@@ -164,114 +268,6 @@ export default function Skills() {
                 </div>
               );
             })}
-          </div>
-
-          {/* Section de synthèse des compétences MAJ */}
-          <div className="mt-12 bg-gradient-to-br from-[#11101D] to-[#1a1835] rounded-2xl shadow-2xl p-8 transform transition-all duration-300 hover:shadow-2xl">
-            <h3 className="text-2xl font-bold mb-8 text-center text-white flex items-center justify-center">
-              <span className="bg-gradient-to-br from-[#FFAA00] to-[#FFB84D] rounded-full p-3 mr-4 shadow-lg">
-                <Globe className="w-6 h-6 text-[#F5F5F5]" />
-              </span>
-              Vue d'ensemble de mes expertises
-            </h3>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center mb-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 transform hover:scale-105 transition-all duration-300">
-                <div className="text-2xl font-bold text-[#FFAA00] mb-2">
-                  {skills.reduce(
-                    (total, skill) =>
-                      ["Frontends", "Backends", "Cloud", "DevOps"].includes(
-                        skill.category
-                      )
-                        ? total + skill.elements.length
-                        : total,
-                    0
-                  )}
-                </div>
-                <p className="text-white text-sm font-medium">Développement</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 transform hover:scale-105 transition-all duration-300">
-                <div className="text-2xl font-bold text-[#FFAA00] mb-2">
-                  {skills.reduce(
-                    (total, skill) =>
-                      ["Données/IA", "Data Engineering", "Langages"].includes(
-                        skill.category
-                      )
-                        ? total + skill.elements.length
-                        : total,
-                    0
-                  )}
-                </div>
-                <p className="text-white text-sm font-medium">Data Science</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 transform hover:scale-105 transition-all duration-300">
-                <div className="text-2xl font-bold text-[#FFAA00] mb-2">
-                  {skills.reduce(
-                    (total, skill) => total + skill.elements.length,
-                    0
-                  )}
-                </div>
-                <p className="text-white text-sm font-medium">
-                  Compétences Total
-                </p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 transform hover:scale-105 transition-all duration-300">
-                <div className="text-2xl font-bold text-[#FFAA00] mb-2">
-                  {skills.length}
-                </div>
-                <p className="text-white text-sm font-medium">Domaines</p>
-              </div>
-            </div>
-
-            {/* Nouvelle section de répartition */}
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <h4 className="text-lg font-semibold text-white mb-4 text-center">
-                Répartition par domaine
-              </h4>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {[
-                  {
-                    name: "Développement",
-                    count: skills.filter((s) =>
-                      ["Frontends", "Backends", "Cloud", "DevOps"].includes(
-                        s.category
-                      )
-                    ).length,
-                  },
-                  {
-                    name: "Data Science",
-                    count: skills.filter((s) =>
-                      ["Données/IA", "Data Engineering"].includes(s.category)
-                    ).length,
-                  },
-                  {
-                    name: "Langages",
-                    count: skills.filter((s) => s.category === "Langages")
-                      .length,
-                  },
-                  {
-                    name: "Bases de données",
-                    count: skills.filter(
-                      (s) => s.category === "Base de données"
-                    ).length,
-                  },
-                ].map((domain, index) => (
-                  <div key={index} className="text-center">
-                    <div className="text-white font-bold text-lg mb-1">
-                      {domain.count}
-                    </div>
-                    <div className="text-gray-300 text-xs">{domain.name}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="mt-6 text-center">
-              <p className="text-gray-300 text-sm">
-                Profil fullstack enrichi d'expertise data science - Prêt pour
-                les défis technologiques modernes
-              </p>
-            </div>
           </div>
         </div>
       </div>
