@@ -1,228 +1,21 @@
 import {
   Target,
-  Calendar,
-  Users,
   Award,
   TrendingUp,
-  Brain,
   Zap,
   BarChart3,
   DollarSign,
   Mail,
+  Home,
+  ImageIcon,
+  ChevronRight,
+  ChevronLeft,
+  X,
+  Eye,
 } from "lucide-react";
-import React from "react";
-
-// Jeu de données unique pour toutes les réalisations
-export const achievementsData = [
-  {
-    id: 1,
-    title: "Plateforme E-commerce High-Performance",
-    icon: <Zap className="w-6 h-6" />,
-    contexte:
-      "Développement d'une plateforme e-commerce pour une entreprise de 500+ employés, nécessitant une architecture scalable pour supporter 100k+ utilisateurs simultanés et traiter plus de 10k commandes par jour.",
-    enjeuxEconomiques: [
-      "Augmentation du chiffre d'affaires de 40%",
-      "Réduction des coûts opérationnels de 25%",
-      "Amélioration de l'expérience client",
-    ],
-    objectifs: [
-      "Créer une plateforme e-commerce moderne et performante",
-      "Intégrer un système de paiement sécurisé",
-      "Optimiser les performances pour 100k+ utilisateurs",
-      "Mettre en place un système de gestion des stocks en temps réel",
-      "Développer une interface d'administration complète",
-    ],
-    phases: [
-      {
-        nom: "Architecture",
-        duree: "2 mois",
-        budget: "50k€",
-        couleur: "blue",
-        taches: [
-          "Conception de l'architecture microservices",
-          "Mise en place de l'infrastructure cloud AWS",
-          "Configuration des bases de données PostgreSQL et Redis",
-        ],
-      },
-      {
-        nom: "Développement",
-        duree: "4 mois",
-        budget: "120k€",
-        couleur: "green",
-        taches: [
-          "Développement frontend avec React/TypeScript",
-          "API REST avec Node.js et Express",
-          "Intégration Stripe pour les paiements",
-        ],
-      },
-      {
-        nom: "Optimisation",
-        duree: "1 mois",
-        budget: "30k€",
-        couleur: "purple",
-        taches: [
-          "Optimisation des performances (CDN, cache)",
-          "Tests de charge et sécurité",
-          "Formation des équipes",
-        ],
-      },
-      {
-        nom: "Déploiement",
-        duree: "2 semaines",
-        budget: "15k€",
-        couleur: "orange",
-        taches: [
-          "Déploiement en production",
-          "Migration des données existantes",
-          "Monitoring et support",
-        ],
-      },
-    ],
-    resultats: {
-      performance: [
-        "Temps de chargement : 1.2s (vs 4.5s avant)",
-        "99.9% de disponibilité",
-        "Support de 150k utilisateurs simultanés",
-      ],
-      business: [
-        "+45% de conversions",
-        "+60% de revenus en ligne",
-        "-30% de coûts d'infrastructure",
-      ],
-      technique: [
-        "Architecture microservices scalable",
-        "CI/CD automatisé",
-        "Monitoring en temps réel",
-      ],
-    },
-    impacts: {
-      quantifies: [
-        "ROI de 300% en 12 mois",
-        "Économies de 200k€/an",
-        "+2M€ de CA supplémentaire",
-      ],
-      reconnaissance: [
-        "Prix 'Innovation Digitale' 2023",
-        "Référence client pour 5 nouveaux projets",
-        "Promotion au poste de Lead Developer",
-      ],
-    },
-    duree: "7 mois (Janvier - Juillet 2023)",
-    budgetTotal: "215k€",
-    contact: {
-      nom: "Jean Dupont",
-      poste: "Directeur Technique",
-      email: "j.dupont@techcorp.com",
-      telephone: "+33 1 23 45 67 89",
-      recommandation:
-        "Hénoc a livré un projet exceptionnel qui a transformé notre business. Son expertise technique et sa gestion de projet sont remarquables.",
-    },
-  },
-  {
-    id: 2,
-    title: "Système d'IA Prédictive pour l'Optimisation des Ventes",
-    icon: <Brain className="w-6 h-6" />,
-    contexte:
-      "Développement d'un système d'intelligence artificielle pour prédire les tendances de vente et optimiser les stratégies marketing d'une entreprise retail avec 200+ points de vente et un chiffre d'affaires de 50M€.",
-    enjeuxEconomiques: [
-      "Optimisation des stocks (-30% de surstockage)",
-      "Augmentation des ventes (+25% de CA)",
-      "Réduction des coûts marketing (-40%)",
-    ],
-    objectifs: [
-      "Créer un modèle prédictif de 90%+ de précision",
-      "Analyser 5+ années de données historiques",
-      "Développer une interface de visualisation intuitive",
-      "Intégrer le système aux outils existants",
-      "Former les équipes à l'utilisation",
-    ],
-    phases: [
-      {
-        nom: "Analyse des données",
-        duree: "1.5 mois",
-        budget: "25k€",
-        couleur: "blue",
-        taches: [
-          "Collecte et nettoyage de 10M+ enregistrements",
-          "Analyse exploratoire des données (EDA)",
-          "Identification des patterns et corrélations",
-        ],
-      },
-      {
-        nom: "Développement ML",
-        duree: "2.5 mois",
-        budget: "60k€",
-        couleur: "green",
-        taches: [
-          "Tests de 15+ algorithmes (Random Forest, XGBoost, LSTM)",
-          "Feature engineering avancé",
-          "Validation croisée et optimisation hyperparamètres",
-        ],
-      },
-      {
-        nom: "Interface utilisateur",
-        duree: "1 mois",
-        budget: "30k€",
-        couleur: "purple",
-        taches: [
-          "Dashboard interactif avec React et D3.js",
-          "API REST pour l'intégration",
-          "Tests utilisateurs et itérations",
-        ],
-      },
-      {
-        nom: "Déploiement",
-        duree: "2 semaines",
-        budget: "15k€",
-        couleur: "orange",
-        taches: [
-          "Mise en production sur AWS",
-          "Formation des équipes (40 personnes)",
-          "Monitoring et maintenance",
-        ],
-      },
-    ],
-    resultats: {
-      performance: [
-        "Précision du modèle : 94.2%",
-        "Temps de prédiction : < 100ms",
-        "Prédictions quotidiennes : 50k+",
-      ],
-      business: [
-        "+28% de précision des prévisions",
-        "-35% de gaspillage de stock",
-        "+22% d'efficacité marketing",
-      ],
-      technique: [
-        "Premier système IA de l'entreprise",
-        "Architecture scalable et maintenable",
-        "Documentation technique complète",
-      ],
-    },
-    impacts: {
-      quantifies: [
-        "ROI de 450% en 18 mois",
-        "Économies de 1.2M€/an",
-        "+3.5M€ de CA supplémentaire",
-      ],
-      reconnaissance: [
-        "Publication dans 'Data Science Journal'",
-        "Conférence 'AI in Retail' 2023",
-        "Promotion au poste de Data Science Lead",
-      ],
-    },
-    duree: "5 mois (Mars - Juillet 2023)",
-    budgetTotal: "130k€",
-    contact: {
-      nom: "Marie Martin",
-      poste: "Directeur Data",
-      email: "m.martin@datainsights.com",
-      telephone: "+33 4 56 78 90 12",
-      recommandation:
-        "Hénoc a révolutionné notre approche de la data science. Son système d'IA a transformé notre business et nous a donné un avantage concurrentiel majeur.",
-    },
-  },
-];
+import React, { useState } from "react";
+import { achievementsData } from "./Achiv.data";
+import Image from "next/image";
 
 // Fonctions pour harmoniser les couleurs des icônes
 const getIconBgColor = (color: string) => {
@@ -277,6 +70,9 @@ export default function Achievement({
   achievementId: number;
 }) {
   const achievement = achievementsData.find((a) => a.id === achievementId);
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(
+    null
+  );
 
   if (!achievement) {
     return <div>Réalisation non trouvée</div>;
@@ -303,6 +99,11 @@ export default function Achievement({
       border: "border-orange-100",
       text: "text-orange-500",
     },
+    red: {
+      bg: "from-red-50 to-white",
+      border: "border-red-100",
+      text: "text-red-500",
+    },
   };
 
   return (
@@ -317,7 +118,6 @@ export default function Achievement({
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="bg-white rounded-lg shadow-2xl p-6 transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 border border-gray-100">
               <h3 className="text-xl font-semibold mb-4 text-[#11101D] flex items-center">
-                {/* Icône LARGE pour titre principal */}
                 <span className="bg-gradient-to-br from-[#FFAA00] to-[#FFB84D] rounded-full p-3 mr-4 shadow-lg">
                   <Target className="w-6 h-6 text-white" />
                 </span>
@@ -343,7 +143,6 @@ export default function Achievement({
 
             <div className="bg-white rounded-lg shadow-2xl p-6 transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 border border-gray-100">
               <h3 className="text-xl font-semibold mb-4 text-[#11101D] flex items-center">
-                {/* Icône LARGE pour titre principal */}
                 <span className="bg-gradient-to-br from-[#FFAA00] to-[#FFB84D] rounded-full p-3 mr-4 shadow-lg">
                   {React.cloneElement(achievement.icon, {
                     className: "w-6 h-6 text-white",
@@ -365,7 +164,6 @@ export default function Achievement({
           {/* Carte Déroulement du projet */}
           <div className="bg-white rounded-lg shadow-2xl p-8 transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 border border-gray-100">
             <h3 className="text-xl font-semibold mb-6 text-[#11101D] flex items-center">
-              {/* Icône MOYENNE pour sous-titre */}
               <span className="bg-gradient-to-br from-[#FFAA00] to-[#FFB84D] rounded-full p-2 mr-3 shadow-lg">
                 <TrendingUp className="w-6 h-6 text-white" />
               </span>
@@ -383,7 +181,6 @@ export default function Achievement({
                   } transform transition-all duration-300 hover:shadow-lg`}
                 >
                   <h4 className="font-semibold text-[#11101D] mb-3 flex items-center">
-                    {/* Icône PETITE pour titre de carte */}
                     <span
                       className={`bg-gradient-to-br ${getIconBgColor(
                         phase.couleur
@@ -415,7 +212,7 @@ export default function Achievement({
                   </ul>
                   <div className="mt-3 pt-2 border-t border-gray-200">
                     <p className="text-xs text-gray-600 font-semibold">
-                      {phase.duree} • {phase.budget}
+                      {phase.duree}
                     </p>
                   </div>
                 </div>
@@ -426,7 +223,6 @@ export default function Achievement({
           {/* Cartes Résultats */}
           <div className="bg-white rounded-lg shadow-2xl p-8 transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 border border-gray-100">
             <h3 className="text-xl font-semibold mb-6 text-[#11101D] flex items-center">
-              {/* Icône LARGE pour titre principal */}
               <span className="bg-gradient-to-br from-[#FFAA00] to-[#FFB84D] rounded-full p-3 mr-4 shadow-lg">
                 <Award className="w-6 h-6 text-white" />
               </span>
@@ -436,7 +232,6 @@ export default function Achievement({
               {/* Carte Performance - Vert */}
               <div className="bg-gradient-to-br from-green-50 to-white rounded-lg p-6 border border-green-100 transform transition-all duration-300 hover:shadow-lg">
                 <div className="flex items-center mb-3">
-                  {/* Icône MOYENNE pour sous-titre de carte */}
                   <span className="bg-gradient-to-br from-green-100 to-green-50 rounded-full p-3 mr-3 shadow-lg border border-green-200">
                     <Zap className="w-4 h-4 text-green-600" />
                   </span>
@@ -455,7 +250,6 @@ export default function Achievement({
               {/* Carte Business - Bleu */}
               <div className="bg-gradient-to-br from-blue-50 to-white rounded-lg p-6 border border-blue-100 transform transition-all duration-300 hover:shadow-lg">
                 <div className="flex items-center mb-3">
-                  {/* Icône MOYENNE pour sous-titre de carte */}
                   <span className="bg-gradient-to-br from-blue-100 to-blue-50 rounded-full p-3 mr-3 shadow-lg border border-blue-200">
                     <DollarSign className="w-4 h-4 text-blue-600" />
                   </span>
@@ -474,7 +268,6 @@ export default function Achievement({
               {/* Carte Technique - Violet */}
               <div className="bg-gradient-to-br from-purple-50 to-white rounded-lg p-6 border border-purple-100 transform transition-all duration-300 hover:shadow-lg">
                 <div className="flex items-center mb-3">
-                  {/* Icône MOYENNE pour sous-titre de carte */}
                   <span className="bg-gradient-to-br from-purple-100 to-purple-50 rounded-full p-3 mr-3 shadow-lg border border-purple-200">
                     <BarChart3 className="w-4 h-4 text-purple-600" />
                   </span>
@@ -492,35 +285,35 @@ export default function Achievement({
             </div>
           </div>
 
-          {/* Cartes Impacts et Contacts */}
+          {/* Cartes Impacts et Galerie */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-[#FFAA00] to-[#FFB84D] rounded-lg shadow-2xl p-6 transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-              <h3 className="text-xl font-semibold mb-4 text-[#11101D]">
+              <h3 className="text-xl font-semibold mb-4 text-white">
                 Impacts et valeur ajoutée
               </h3>
               <div className="grid grid-cols-1 gap-4">
                 <div>
-                  <h4 className="font-semibold text-[#11101D] mb-2">
+                  <h4 className="font-semibold text-white mb-2">
                     Impacts quantifiés :
                   </h4>
                   <ul className="text-[#11101D] space-y-2">
                     {achievement.impacts.quantifies.map((impact, index) => (
                       <li key={index} className="flex items-start">
-                        <span className="text-[#11101D] mr-2">•</span>
+                        <span className="text-white mr-2">•</span>
                         {impact}
                       </li>
                     ))}
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-[#11101D] mb-2">
+                  <h4 className="font-semibold text-white mb-2">
                     Reconnaissance :
                   </h4>
                   <ul className="text-[#11101D] space-y-2">
                     {achievement.impacts.reconnaissance.map(
                       (reconnaissance, index) => (
                         <li key={index} className="flex items-start">
-                          <span className="text-[#11101D] mr-2">•</span>
+                          <span className="text-white mr-2">•</span>
                           {reconnaissance}
                         </li>
                       )
@@ -532,40 +325,159 @@ export default function Achievement({
 
             <div className="bg-white rounded-lg shadow-2xl p-6 transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 border border-gray-100">
               <h3 className="text-xl font-semibold mb-4 text-[#11101D] flex items-center">
-                {/* Icône LARGE pour titre principal */}
                 <span className="bg-gradient-to-br from-[#FFAA00] to-[#FFB84D] rounded-full p-3 mr-4 shadow-lg">
-                  <Users className="w-6 h-6 text-white" />
+                  <ImageIcon className="w-6 h-6 text-white" />
                 </span>
-                Contacts et recommandations
+                Galerie du projet
               </h3>
               <div className="space-y-4">
+                {/* Galerie de photos */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {achievement.images?.map((image, index) => (
+                    <div
+                      key={index}
+                      className="relative group cursor-pointer"
+                      onClick={() => setSelectedImageIndex(index)}
+                    >
+                      <div className="aspect-square rounded-lg overflow-hidden border border-gray-200 bg-gray-100">
+                        <Image
+                          src={image.url}
+                          alt={image.alt}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 rounded-lg flex items-center justify-center">
+                        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white bg-black bg-opacity-50 rounded-full p-2">
+                          <Eye className="w-4 h-4" />
+                        </div>
+                      </div>
+                      {image.caption && (
+                        <p className="text-xs text-gray-600 mt-2 text-center">
+                          {image.caption}
+                        </p>
+                      )}
+                    </div>
+                  ))}
+                </div>
+
+                {/* Informations du projet */}
                 <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
                   <h4 className="font-semibold text-[#11101D] mb-2">
-                    {achievement.contact.poste} : {achievement.contact.nom}
+                    {achievement.contact.poste}
                   </h4>
                   <p className="text-sm text-gray-700">
-                    Email : {achievement.contact.email}
+                    Durée : {achievement.duree}
                   </p>
                   <p className="text-sm text-gray-700">
-                    Téléphone : {achievement.contact.telephone}
+                    Statut : {achievement.contact.nom}
                   </p>
+                  {achievement.contact.projectLink && (
+                    <p className="text-sm text-gray-700">
+                      Lien du projet :{" "}
+                      <a
+                        href={achievement.contact.projectLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#FFAA00] hover:underline font-medium"
+                      >
+                        {achievement.contact.projectLink}
+                      </a>
+                    </p>
+                  )}
                 </div>
+
+                {/* Description */}
                 <div className="bg-gradient-to-br from-orange-50 to-white rounded-lg p-4 border border-orange-100">
-                  <p className="text-sm text-gray-700 italic leading-relaxed">
-                    "{achievement.contact.recommandation}"
+                  <p className="text-sm text-gray-700 leading-relaxed">
+                    {achievement.contact.recommandation}
                   </p>
-                </div>
-                <div className="flex items-center justify-between text-sm text-gray-600">
-                  <span>{achievement.duree}</span>
-                  <span className="font-semibold">
-                    Budget : {achievement.budgetTotal}
-                  </span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Modal/Lightbox */}
+      {selectedImageIndex !== null && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedImageIndex(null)}
+        >
+          <div
+            className="relative max-w-4xl max-h-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Bouton fermer */}
+            <button
+              onClick={() => setSelectedImageIndex(null)}
+              className="absolute -top-12 right-0 text-white hover:text-[#FFAA00] transition-colors z-10"
+            >
+              <X className="w-8 h-8" />
+            </button>
+
+            {/* Image principale */}
+            <div className="relative rounded-lg overflow-hidden">
+              <Image
+                src={achievement.images![selectedImageIndex].url}
+                alt={achievement.images![selectedImageIndex].alt}
+                width={800}
+                height={600}
+                className="max-w-full max-h-[80vh] object-contain"
+              />
+            </div>
+
+            {/* Légende */}
+            {achievement.images![selectedImageIndex].caption && (
+              <div className="text-white text-center mt-4">
+                <p className="text-lg">
+                  {achievement.images![selectedImageIndex].caption}
+                </p>
+              </div>
+            )}
+
+            {/* Navigation si plusieurs images */}
+            {achievement.images!.length > 1 && (
+              <>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedImageIndex(
+                      selectedImageIndex === 0
+                        ? achievement.images!.length - 1
+                        : selectedImageIndex - 1
+                    );
+                  }}
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-[#FFAA00] transition-colors bg-black bg-opacity-50 rounded-full p-2"
+                >
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedImageIndex(
+                      selectedImageIndex === achievement.images!.length - 1
+                        ? 0
+                        : selectedImageIndex + 1
+                    );
+                  }}
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-[#FFAA00] transition-colors bg-black bg-opacity-50 rounded-full p-2"
+                >
+                  <ChevronRight className="w-6 h-6" />
+                </button>
+              </>
+            )}
+
+            {/* Indicateur de position */}
+            {achievement.images!.length > 1 && (
+              <div className="text-white text-center mt-4">
+                {selectedImageIndex + 1} / {achievement.images!.length}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </section>
   );
 }
