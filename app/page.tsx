@@ -46,22 +46,7 @@ export default function Home() {
         <Achievements />
 
         {/* Synthèse des compétences */}
-        <div className="relative min-h-screen">
-          <div className="absolute inset-0 w-full h-full -z-10">
-            <Image
-              src="/img/2.png"
-              alt="Background"
-              fill
-              placeholder="blur"
-              priority
-              blurDataURL={blurData["2.png"]}
-              className="object-cover"
-              sizes="100vw"
-            />
-            <div className="absolute inset-0 bg-black opacity-50"></div>
-          </div>
-          <Skills />
-        </div>
+        <Skills />
 
         {/* Réseaux professionnels */}
         {/* <Network /> */}

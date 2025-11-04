@@ -12,7 +12,7 @@ import {
 export const achievementsData = [
   {
     id: 1,
-    title: "Estas-Home, plateforme de Gestion Locative",
+    title: "Extase-Home, plateforme de Gestion Locative",
     icon: <Home className="w-6 h-6" />,
     contexte:
       "Développement d'une plateforme de gestion locative complète pour un propriétaire immobilier avec un parc de 25+ propriétés, confronté à des difficultés de gestion des locataires, suivi des paiements, partage de documents et émission de reçus.",
@@ -122,14 +122,34 @@ export const achievementsData = [
     duree: "3 mois (Développement complet avec retours)",
     images: [
       {
-        url: "/img/extase-home1.png",
-        alt: "Architecture hexagonale du système",
-        caption: "Diagramme d'architecture modulaire",
+        url: "/img/extase-home0.png",
+        alt: "",
+        caption: "",
       },
       {
-        url: "/img/extase-home2.png",
-        alt: "Architecture hexagonale du système",
-        caption: "Diagramme d'architecture modulaire",
+        url: "/img/extase-home1.png",
+        alt: "",
+        caption: "",
+      },
+      {
+        url: "/img/extase-home3.png",
+        alt: "",
+        caption: "",
+      },
+      {
+        url: "/img/extase-home4.png",
+        alt: "",
+        caption: "",
+      },
+      {
+        url: "/img/extase-home5.png",
+        alt: "",
+        caption: "",
+      },
+      {
+        url: "/img/extase-home6.png",
+        alt: "",
+        caption: "",
       },
     ],
     contact: {
@@ -254,9 +274,34 @@ export const achievementsData = [
     duree: "2.5 mois (Conception à déploiement)",
     images: [
       {
-        url: "/img/extase-home.png",
-        alt: "Architecture hexagonale du système",
-        caption: "Diagramme d'architecture modulaire",
+        url: "/img/tournoi-amitie1.png",
+        alt: "",
+        caption: "",
+      },
+      {
+        url: "/img/tournoi-amitie2.png",
+        alt: "",
+        caption: "",
+      },
+      {
+        url: "/img/tournoi-amitie3.png",
+        alt: "",
+        caption: "",
+      },
+      {
+        url: "/img/tournoi-amitie4.png",
+        alt: "",
+        caption: "",
+      },
+      {
+        url: "/img/tournoi-amitie5.png",
+        alt: "",
+        caption: "",
+      },
+      {
+        url: "/img/tournoi-amitie6.png",
+        alt: "",
+        caption: "",
       },
     ],
     contact: {
@@ -379,13 +424,7 @@ export const achievementsData = [
       ],
     },
     duree: "2.5 mois (Développement API complète)",
-    images: [
-      {
-        url: "/img/extase-home.png",
-        alt: "Architecture hexagonale du système",
-        caption: "Diagramme d'architecture modulaire",
-      },
-    ],
+    images: [],
     contact: {
       nom: "Projet de formation",
       projectLink: "",
@@ -507,13 +546,7 @@ export const achievementsData = [
       ],
     },
     duree: "3 mois (Développement API complète)",
-    images: [
-      {
-        url: "/img/extase-home.png",
-        alt: "Architecture hexagonale du système",
-        caption: "Diagramme d'architecture modulaire",
-      },
-    ],
+    images: [],
     contact: {
       nom: "Projet de formation",
       projectLink: "",
@@ -632,28 +665,7 @@ export const achievementsData = [
       ],
     },
     duree: "10 heures (Projet universitaire intensif)",
-    images: [
-      {
-        url: "/projets/sae303/visualisation-series.png",
-        alt: "Visualisation des séries temporelles de décès",
-        caption: "Séries temporelles des décès pulmonaires 1974-1979",
-      },
-      {
-        url: "/projets/sae303/decomposition.png",
-        alt: "Décomposition de la série temporelle",
-        caption: "Décomposition en tendance, saisonnalité et résidus",
-      },
-      {
-        url: "/projets/sae303/previsions.png",
-        alt: "Prévisions des modèles ARIMA/SARIMA",
-        caption: "Comparaison des prévisions avec données réelles",
-      },
-      {
-        url: "/projets/sae303/acf-pacf.png",
-        alt: "Fonctions ACF et PACF",
-        caption: "Autocorrélations pour identification des modèles",
-      },
-    ],
+    images: [],
     contact: {
       nom: "Projet Universitaire - IUT SD",
       projectLink: "",
@@ -774,28 +786,7 @@ export const achievementsData = [
       ],
     },
     duree: "36 heures (Projet universitaire semestriel)",
-    images: [
-      {
-        url: "/projets/sae-ems/echantillonnage.png",
-        alt: "Diagrammes d'échantillonnage PESR et stratifié",
-        caption: "Plans d'échantillonnage implémentés",
-      },
-      {
-        url: "/projets/sae-ems/simulations.png",
-        alt: "Distributions des estimateurs par simulations",
-        caption: "Histogrammes normalisés des 1000 simulations",
-      },
-      {
-        url: "/projets/sae-ems/questionnaire.png",
-        alt: "Questionnaire de collecte de données",
-        caption: "Formulaire de 10 questions déployé",
-      },
-      {
-        url: "/projets/sae-ems/analyse.png",
-        alt: "Analyses multifactorielles et tris croisés",
-        caption: "Visualisations avancées des données sociales",
-      },
-    ],
+    images: [],
     contact: {
       nom: "Projet Universitaire - IUT SD",
       projectLink: "",
@@ -914,28 +905,7 @@ export const achievementsData = [
       ],
     },
     duree: "5 semaines (Projet universitaire semestriel)",
-    images: [
-      {
-        url: "/projets/breaking-bad/mcd.png",
-        alt: "Modèle Conceptuel de Données Breaking Bad",
-        caption: "MCD conçu avec Looping montrant les entités et relations",
-      },
-      {
-        url: "/projets/breaking-bad/modele-flocons.png",
-        alt: "Modèle en flocons avec dimension temporelle",
-        caption: "Schéma en flocons intégrant la dimension temporelle",
-      },
-      {
-        url: "/projets/breaking-bad/fme-workflow.png",
-        alt: "Workflow ETL FME",
-        caption: "Processus de transformation des données avec FME",
-      },
-      {
-        url: "/projets/breaking-bad/schema-bdd.png",
-        alt: "Schéma base de données PostgreSQL",
-        caption: "Structure finale de la base de données implémentée",
-      },
-    ],
+    images: [],
     contact: {
       nom: "Projet Universitaire - IUT SD",
       projectLink: "",
