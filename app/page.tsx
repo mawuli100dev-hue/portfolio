@@ -70,7 +70,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="flex justify-center space-x-6">
               <a
-                href=""
+                href="https://github.com/mawuli100dev-hue/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-blue-500 transition-colors"
@@ -78,7 +78,7 @@ export default function Home() {
                 <FaLinkedin size={30} />
               </a>
               <a
-                href=""
+                href="www.linkedin.com/in/ayi-mawuli-amavigan-335646394"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gray-400 transition-colors"
@@ -86,36 +86,12 @@ export default function Home() {
                 <FaGithub size={30} />
               </a>
               <a
-                href="https://wa.me/+"
+                href="https://wa.me/+33774749825"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-green-500 transition-colors"
               >
                 <FaWhatsapp size={30} />
-              </a>
-              <a
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-blue-400 transition-colors"
-              >
-                <FaTwitter size={30} />
-              </a>
-              <a
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-pink-500 transition-colors"
-              >
-                <FaInstagram size={30} />
-              </a>
-              <a
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-blue-600 transition-colors"
-              >
-                <FaFacebook size={30} />
               </a>
             </div>
             <div className="text-center mt-4">

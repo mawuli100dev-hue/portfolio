@@ -127,7 +127,7 @@ export const achievementsData = [
         caption: "",
       },
       {
-        url: "/img/extase-home1.png",
+        url: "/img/extase-home2.png",
         alt: "",
         caption: "",
       },
