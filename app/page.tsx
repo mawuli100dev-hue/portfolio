@@ -70,7 +70,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="flex justify-center space-x-6">
               <a
-                href="https://github.com/mawuli100dev-hue/"
+                href="www.linkedin.com/in/ayi-mawuli-amavigan-335646394"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-blue-500 transition-colors"
@@ -78,7 +78,7 @@ export default function Home() {
                 <FaLinkedin size={30} />
               </a>
               <a
-                href="www.linkedin.com/in/ayi-mawuli-amavigan-335646394"
+                href="https://github.com/mawuli100dev-hue/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gray-400 transition-colors"
