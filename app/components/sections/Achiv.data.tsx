@@ -665,7 +665,26 @@ export const achievementsData = [
       ],
     },
     duree: "10 heures (Projet universitaire intensif)",
-    images: [],
+    images: [
+      {
+        url: "/img/ts_plumonie_plot1.png",
+        alt: "",
+        caption: "",
+      },
+      { url: "/img/ts_plumonie_plot2.png", alt: "", caption: "" },
+      {
+        url: "/img/ts_plumonie_plot3.png",
+        alt: "",
+        caption: "",
+      },
+      { url: "/img/ts_plumonie_plot4.png", alt: "", caption: "" },
+      {
+        url: "/img/ts_plumonie_plot5.png",
+        alt: "",
+        caption: "",
+      },
+      { url: "/img/ts_plumonie_plot6.png", alt: "", caption: "" },
+    ],
     contact: {
       nom: "Projet Universitaire - IUT SD",
       projectLink: "",
