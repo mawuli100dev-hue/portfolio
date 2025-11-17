@@ -805,7 +805,14 @@ export const achievementsData = [
       ],
     },
     duree: "36 heures (Projet universitaire semestriel)",
-    images: [],
+    images: [
+      { url: "/img/sondage_loisir_immig_plot 1.png", alt: "", caption: "" },
+      { url: "/img/sondage_loisir_immig_plot 2.png", alt: "", caption: "" },
+      { url: "/img/sondage_loisir_immig_plot 3.png", alt: "", caption: "" },
+      { url: "/img/sondage_loisir_immig_plot 4.png", alt: "", caption: "" },
+      { url: "/img/sondage_loisir_immig_plot 5.png", alt: "", caption: "" },
+      { url: "/img/sondage_loisir_immig_plot 6.png", alt: "", caption: "" },
+    ],
     contact: {
       nom: "Projet Universitaire - IUT SD",
       projectLink: "",
