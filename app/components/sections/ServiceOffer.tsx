@@ -21,7 +21,8 @@ export default function ServiceOffer() {
       description:
         "Création d'un site web simple et moderne pour présenter votre activité ou vos travaux",
       duration: "1-3 semaines",
-      price: "15-25€/h",
+      // price: "15-25€/h",
+      price: "",
       deliverables: [
         "Site web responsive (s'adapte aux mobiles)",
         "Formulaire de contact fonctionnel",
@@ -43,7 +44,8 @@ export default function ServiceOffer() {
       description:
         "Automatisation de tâches répétitives: traitement de fichiers, données, rapports",
       duration: "1-2 semaines",
-      price: "15-20€/h",
+      // price: "15-20€/h",
+      price: "",
       deliverables: [
         "Script Python/Node.js fonctionnel",
         "Documentation d'utilisation",
@@ -58,7 +60,8 @@ export default function ServiceOffer() {
       description:
         "Nettoyage, analyse et visualisation de vos données pour en extraire des insights",
       duration: "1-4 semaines",
-      price: "20-25€/h",
+      // price: "20-25€/h",
+      price: "",
       deliverables: [
         "Données nettoyées et organisées",
         "Rapport d'analyse avec graphiques",
@@ -79,7 +82,8 @@ export default function ServiceOffer() {
       description:
         "Développement d'une application web avec fonctionnalités basiques",
       duration: "2-6 semaines",
-      price: "20-30€/h",
+      // price: "20-30€/h",
+      price: "",
       deliverables: [
         "Application web fonctionnelle",
         "Interface utilisateur simple",
@@ -101,7 +105,8 @@ export default function ServiceOffer() {
       description:
         "Modernisation d'un site web existant: design et performances",
       duration: "2-4 semaines",
-      price: "20-25€/h",
+      // price: "20-25€/h",
+      price: "",
       deliverables: [
         "Site modernisé et responsive",
         "Meilleures performances",
@@ -115,7 +120,8 @@ export default function ServiceOffer() {
       title: "Création d'API REST",
       description: "Développement d'une API  pour connecter vos applications",
       duration: "1-3 semaines",
-      price: "20-28€/h",
+      // price: "20-28€/h",
+      price: "",
       deliverables: [
         "API REST fonctionnelle",
         "Documentation des endpoints",
@@ -136,7 +142,8 @@ export default function ServiceOffer() {
       description:
         "Création d'un tableau de bord simple pour suivre vos métriques",
       duration: "2-5 semaines",
-      price: "22-30€/h",
+      // price: "22-30€/h",
+      price: "",
       deliverables: [
         "Dashboard interactif",
         "Connexion à vos données",
@@ -151,7 +158,8 @@ export default function ServiceOffer() {
       description:
         "Aide ponctuelle sur vos projets techniques: debug, fonctionnalités",
       duration: "À la mission",
-      price: "15-20€/h",
+      // price: "15-20€/h",
+      price: "",
       deliverables: [
         "Résolution de problèmes techniques",
         "Ajout de fonctionnalités simples",
