@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 // Configuration de la police Poppins
@@ -39,6 +40,7 @@ export default function RootLayout({
       {/* Changé en français */}
       <body className={`${poppins.variable} font-poppins antialiased`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
