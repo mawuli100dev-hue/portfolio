@@ -25,7 +25,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const sectionIds = [
     "#welcome",
     "#about",
-    "#context",
+    // "#context",
     "#education",
     "#experience",
     "#achievements",
@@ -34,8 +34,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "#resources",
     "#publications",
     "#personal-strengths",
-    "#service-offer",
-    "#contact"
+    // "#service-offer",
+    "#contact",
   ];
 
   useEffect(() => {
@@ -61,7 +61,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const navItems = [
     { name: "Bienvenue", href: "#welcome", icon: Code },
     { name: "À propos", href: "#about", icon: Code },
-    { name: "Contexte & enjeux", href: "#context", icon: Lightbulb },
+    // { name: "Contexte & enjeux", href: "#context", icon: Lightbulb },
     { name: "Formation", href: "#education", icon: BarChart2 },
     { name: "Expériences", href: "#experience", icon: Briefcase },
     { name: "Réalisations", href: "#achievements", icon: Award },
@@ -70,13 +70,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { name: "Ressources", href: "#resources", icon: BookOpen },
     // { name: "Publications", href: "#publications", icon: FileText },
     { name: "Atouts", href: "#personal-strengths", icon: Star },
-    { name: "Offre", href: "#service-offer", icon: Briefcase },
+    // { name: "Offre", href: "#service-offer", icon: Briefcase },
     { name: "Contact", href: "#contact", icon: Mail },
   ];
 
   return (
     <div className="min-h-screen text-[#F5F5F5] relative">
-      
       <header className="sticky top-0 z-50 w-full bg-[#11101D]/40 backdrop-blur-sm backdrop-filter">
         <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div></div>
