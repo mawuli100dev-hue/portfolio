@@ -34,7 +34,7 @@ export default function Home() {
         <About />
 
         {/* Contexte et enjeux */}
-        <Context />
+        {/* <Context /> */}
 
         {/* Parcours universitaire/formation */}
         <Education />
@@ -61,7 +61,7 @@ export default function Home() {
         <PersonalStrengths />
 
         {/* Offre d'intervention */}
-        <ServiceOffer />
+        {/* <ServiceOffer /> */}
 
         {/* Contact */}
         <Contact />
