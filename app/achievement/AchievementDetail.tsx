@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Target,
   Award,
@@ -64,7 +66,7 @@ const getIconTextColor = (color: string) => {
 };
 
 // Composant réutilisable
-export default function Achievement({
+export default function AchievementDetail({
   achievementId,
 }: {
   achievementId: number;
