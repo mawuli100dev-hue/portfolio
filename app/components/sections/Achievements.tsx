@@ -11,9 +11,8 @@ export default function Achievements() {
           </h2>
         </div>
 
-        {/* Grille avec hauteurs égales */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[...achievementsData].reverse().map((achievement) => (
+          {[...achievementsData].map((achievement) => (
             <div key={achievement.id} className="h-full">
               <AchievementCard achievement={achievement} />
             </div>
