@@ -123,15 +123,13 @@ export default function AchievementDetail({
                 <span className="bg-gradient-to-br from-[#FFAA00] to-[#FFB84D] rounded-full p-3 mr-4 shadow-lg">
                   <Target className="w-6 h-6 text-white" />
                 </span>
-                Contexte et enjeux
+                Contexte
               </h3>
               <p className="text-gray-700 mb-4 leading-relaxed">
                 {achievement.contexte}
               </p>
               <div className="bg-gradient-to-br from-orange-50 to-white rounded-lg p-4 border border-orange-100 transform transition-all duration-300 hover:shadow-lg">
-                <h4 className="font-semibold text-[#11101D] mb-2">
-                  Enjeux économiques :
-                </h4>
+                <h4 className="font-semibold text-[#11101D] mb-2">Enjeux :</h4>
                 <ul className="text-sm text-gray-700 space-y-2">
                   {achievement.enjeuxEconomiques.map((enjeu, index) => (
                     <li key={index} className="flex items-start">
@@ -255,7 +253,7 @@ export default function AchievementDetail({
                   <span className="bg-gradient-to-br from-blue-100 to-blue-50 rounded-full p-3 mr-3 shadow-lg border border-blue-200">
                     <DollarSign className="w-4 h-4 text-blue-600" />
                   </span>
-                  <h4 className="font-semibold text-blue-800">Business</h4>
+                  <h4 className="font-semibold text-blue-800">Résultats</h4>
                 </div>
                 <ul className="text-sm text-blue-700 space-y-2">
                   {achievement.resultats.business.map((resultat, index) => (

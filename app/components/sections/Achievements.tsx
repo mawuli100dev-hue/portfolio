@@ -3,7 +3,7 @@ import { achievementsData } from "../../achievement/Achiv.data";
 
 export default function Achievements() {
   return (
-    <section className="py-16 bg-white">
+    <section id="achievements" className="py-16 bg-white">
       <div className="container mx-auto px-12">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-[#11101D] mb-4">

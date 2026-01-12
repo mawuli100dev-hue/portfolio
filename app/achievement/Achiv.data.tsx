@@ -12,7 +12,7 @@ import {
 export const achievementsData = [
   {
     id: 1,
-    title: "Extase-Home, plateforme de Gestion Locative",
+    title: "Extase-Home, plateforme de Gestion Locative (freelance)",
     icon: <Home className="w-6 h-6" />,
     contexte:
       "Développement d'une plateforme de gestion locative complète pour un propriétaire immobilier avec un parc de 25+ propriétés, confronté à des difficultés de gestion des locataires, suivi des paiements, partage de documents et émission de reçus.",
@@ -164,7 +164,8 @@ export const achievementsData = [
   },
   {
     id: 2,
-    title: "Tournoi de l'Amitié, plateforme de Gestion de Tournois de Football",
+    title:
+      "Tournoi de l'Amitié, plateforme de Gestion de Tournois de Football (freelance)",
     icon: <Trophy className="w-6 h-6" />,
     contexte:
       "Développement d'une plateforme web pour digitaliser un tournoi de football annuel, permettant aux organisateurs de gérer les équipes, les matchs et les statistiques, et aux spectateurs de suivre en temps réel le déroulement du tournoi.",
@@ -316,7 +317,7 @@ export const achievementsData = [
   },
   {
     id: 3,
-    title: "API Bible Digital, plateforme de Lecture Biblique",
+    title: "API Bible Digital, plateforme de Lecture Biblique (freelance)",
     icon: <BookOpen className="w-6 h-6" />,
     contexte:
       "Développement d'une API RESTful pour une application de lecture biblique visant à remplacer les calendriers papier traditionnels, offrant une recherche avancée, des rappels de lecture et une gestion numérique des contenus spirituels quotidiens.",
@@ -437,7 +438,7 @@ export const achievementsData = [
   },
   {
     id: 4,
-    title: "API E-commerce Multi-Tenant, plateforme de Marketplaces",
+    title: "API E-commerce Multi-Tenant (projet personnel)",
     icon: <ShoppingCart className="w-6 h-6" />,
     contexte:
       "Développement d'une API e-commerce multi-tenant permettant à plusieurs commerçants de créer leur boutique en ligne sur une même plateforme, avec isolation des données et gestion modulaire des fonctionnalités.",
