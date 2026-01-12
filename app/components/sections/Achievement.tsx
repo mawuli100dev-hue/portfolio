@@ -110,7 +110,7 @@ export default function Achievement({
     <section id="achievements" className="relative py-20 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-12 text-center text-black">
-          Réalisation {achievement.id} : {achievement.title}
+          {achievement.title}
         </h2>
 
         <div className="max-w-6xl mx-auto space-y-8">
