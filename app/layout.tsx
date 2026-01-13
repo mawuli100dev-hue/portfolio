@@ -36,7 +36,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      {" "}
       {/* Changé en français */}
       <body className={`${poppins.variable} font-poppins antialiased`}>
         {children}

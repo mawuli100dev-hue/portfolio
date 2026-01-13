@@ -1,13 +1,5 @@
 import Link from "next/link";
 import {
-  Home,
-  Trophy,
-  BookOpen,
-  ShoppingCart,
-  TrendingUp,
-  BarChart3,
-  Database,
-  Clock,
   FileText,
   Target,
   ChevronRight,
@@ -21,7 +13,6 @@ interface AchievementCardProps {
     icon: JSX.Element;
     contexte: string;
     enjeuxEconomiques: string[];
-    duree: string;
   };
 }
 
@@ -42,12 +33,6 @@ export default function AchievementCard({ achievement }: AchievementCardProps) {
           <h3 className="text-xl font-bold text-[#11101D] mb-2 line-clamp-2">
             {achievement.title}
           </h3>
-          <div className="flex items-center text-sm text-gray-600">
-            <span className="flex items-center bg-gray-100 px-3 py-1 rounded-full text-xs font-medium">
-              <Clock className="w-3 h-3 mr-1 text-gray-600 flex-shrink-0" />
-              <span className="truncate">{achievement.duree}</span>
-            </span>
-          </div>
         </div>
       </div>
 

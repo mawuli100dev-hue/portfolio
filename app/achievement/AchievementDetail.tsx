@@ -210,11 +210,6 @@ export default function AchievementDetail({
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-3 pt-2 border-t border-gray-200">
-                    <p className="text-xs text-gray-600 font-semibold">
-                      {phase.duree}
-                    </p>
-                  </div>
                 </div>
               ))}
             </div>
@@ -366,9 +361,6 @@ export default function AchievementDetail({
                   <h4 className="font-semibold text-[#11101D] mb-2">
                     {achievement.contact.poste}
                   </h4>
-                  <p className="text-sm text-gray-700">
-                    Durée : {achievement.duree}
-                  </p>
                   <p className="text-sm text-gray-700">
                     Statut : {achievement.contact.nom}
                   </p>

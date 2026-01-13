@@ -4,6 +4,7 @@ import {
   Brain,
   Database,
   Home,
+  ShieldAlert,
   ShoppingCart,
   TrendingUp,
   Trophy,
@@ -32,7 +33,6 @@ export const achievementsData = [
     phases: [
       {
         nom: "Conception & Design",
-        duree: "3 semaines",
         couleur: "blue",
         taches: [
           "Design de l'interface utilisateur (Figma)",
@@ -43,7 +43,6 @@ export const achievementsData = [
       },
       {
         nom: "Développement Frontend",
-        duree: "1 mois",
         couleur: "green",
         taches: [
           "Interface propriétaire (tableau de bord complet)",
@@ -54,7 +53,6 @@ export const achievementsData = [
       },
       {
         nom: "Développement Backend",
-        duree: "1 mois",
         couleur: "purple",
         taches: [
           "API REST avec architecture MVC",
@@ -65,7 +63,6 @@ export const achievementsData = [
       },
       {
         nom: "Tests & Optimisation",
-        duree: "2 semaines",
         couleur: "orange",
         taches: [
           "Intégration des retours utilisateur",
@@ -76,7 +73,6 @@ export const achievementsData = [
       },
       {
         nom: "Déploiement & Formation",
-        duree: "1 semaine",
         couleur: "red",
         taches: [
           "Déploiement sur Render",
@@ -119,7 +115,6 @@ export const achievementsData = [
         "Validation du concept de digitalisation immobilière",
       ],
     },
-    duree: "3 mois (Développement complet avec retours)",
     images: [
       {
         url: "/img/extase-home0.png",
@@ -185,7 +180,6 @@ export const achievementsData = [
     phases: [
       {
         nom: "Conception & Architecture",
-        duree: "2 semaines",
         couleur: "blue",
         taches: [
           "Design de l'interface utilisateur et admin",
@@ -196,7 +190,6 @@ export const achievementsData = [
       },
       {
         nom: "Développement Frontend",
-        duree: "3 semaines",
         couleur: "green",
         taches: [
           "Interface publique avec scores en temps réel",
@@ -207,7 +200,6 @@ export const achievementsData = [
       },
       {
         nom: "Développement Backend",
-        duree: "3 semaines",
         couleur: "purple",
         taches: [
           "API REST avec architecture hexagonale",
@@ -218,7 +210,6 @@ export const achievementsData = [
       },
       {
         nom: "Interface Admin & Tests",
-        duree: "2 semaines",
         couleur: "orange",
         taches: [
           "Développement du panel d'administration",
@@ -229,7 +220,6 @@ export const achievementsData = [
       },
       {
         nom: "Déploiement & Formation",
-        duree: "1 semaine",
         couleur: "red",
         taches: [
           "Déploiement sur Vercel",
@@ -272,7 +262,6 @@ export const achievementsData = [
         "Reconnaissance de l'innovation digitale dans le sport local",
       ],
     },
-    duree: "2.5 mois (Conception à déploiement)",
     images: [
       {
         url: "/img/tournoi-amitie1.png",
@@ -337,7 +326,6 @@ export const achievementsData = [
     phases: [
       {
         nom: "Architecture & Conception API",
-        duree: "3 semaines",
         couleur: "blue",
         taches: [
           "Design de l'architecture hexagonale (Ports & Adapters)",
@@ -348,7 +336,6 @@ export const achievementsData = [
       },
       {
         nom: "Développement Core Domain",
-        duree: "1 mois",
         couleur: "green",
         taches: [
           "Implémentation des entités métier (Utilisateur, Lecture, Marque-page)",
@@ -359,7 +346,6 @@ export const achievementsData = [
       },
       {
         nom: "Développement Infrastructure",
-        duree: "3 semaines",
         couleur: "purple",
         taches: [
           "Implémentation des adapters (Base de données, External APIs)",
@@ -370,7 +356,6 @@ export const achievementsData = [
       },
       {
         nom: "Fonctionnalités Avancées",
-        duree: "2 semaines",
         couleur: "orange",
         taches: [
           "Système de marque-pages et notes personnelles",
@@ -381,7 +366,6 @@ export const achievementsData = [
       },
       {
         nom: "Tests & Déploiement",
-        duree: "1 semaine",
         couleur: "red",
         taches: [
           "Tests d'intégration et de performance",
@@ -424,7 +408,6 @@ export const achievementsData = [
         "Validation de l'approche technique par des développeurs seniors",
       ],
     },
-    duree: "2.5 mois (Développement API complète)",
     images: [],
     contact: {
       nom: "Projet de formation",
@@ -458,7 +441,6 @@ export const achievementsData = [
     phases: [
       {
         nom: "Architecture Multi-Tenant",
-        duree: "3 semaines",
         couleur: "blue",
         taches: [
           "Design de l'architecture hexagonale modulaire",
@@ -469,7 +451,6 @@ export const achievementsData = [
       },
       {
         nom: "Développement Core Modules",
-        duree: "1 mois",
         couleur: "green",
         taches: [
           "Module de gestion des tenants (commerçants)",
@@ -480,7 +461,6 @@ export const achievementsData = [
       },
       {
         nom: "Fonctionnalités Avancées",
-        duree: "3 semaines",
         couleur: "purple",
         taches: [
           "Système de paiement unifié",
@@ -491,7 +471,6 @@ export const achievementsData = [
       },
       {
         nom: "Sécurité & Performance",
-        duree: "2 semaines",
         couleur: "orange",
         taches: [
           "Isolation stricte des données entre tenants",
@@ -502,7 +481,6 @@ export const achievementsData = [
       },
       {
         nom: "Déploiement & Documentation",
-        duree: "1 semaine",
         couleur: "red",
         taches: [
           "Déploiement sur Render avec variables d'environnement",
@@ -546,7 +524,6 @@ export const achievementsData = [
         "Base solide pour de futurs projets e-commerce",
       ],
     },
-    duree: "3 mois (Développement API complète)",
     images: [],
     contact: {
       nom: "Projet de formation",
@@ -580,7 +557,6 @@ export const achievementsData = [
     phases: [
       {
         nom: "Gestion de Projet & Recherche",
-        duree: "2 heures",
         couleur: "blue",
         taches: [
           "Élaboration du diagramme de Gantt sur 10h",
@@ -591,7 +567,6 @@ export const achievementsData = [
       },
       {
         nom: "Exploration des Données",
-        duree: "2 heures",
         couleur: "green",
         taches: [
           "Contextualisation des données (source, période, unités)",
@@ -602,7 +577,6 @@ export const achievementsData = [
       },
       {
         nom: "Tests Statistiques",
-        duree: "2 heures",
         couleur: "purple",
         taches: [
           "Test de stationnarité (Dickey-Fuller augmenté)",
@@ -613,7 +587,6 @@ export const achievementsData = [
       },
       {
         nom: "Décomposition & Modélisation",
-        duree: "2 heures",
         couleur: "orange",
         taches: [
           "Choix du modèle de décomposition (additif/multiplicatif)",
@@ -624,7 +597,6 @@ export const achievementsData = [
       },
       {
         nom: "Prévision & Rédaction",
-        duree: "2 heures",
         couleur: "red",
         taches: [
           "Implémentation des modèles de prévision (ARIMA, SARIMA)",
@@ -665,7 +637,6 @@ export const achievementsData = [
         "Reconnaissance par les enseignants de la qualité analytique",
       ],
     },
-    duree: "10 heures (Projet universitaire intensif)",
     images: [
       {
         url: "/img/ts_plumonie_plot1.png",
@@ -718,7 +689,6 @@ export const achievementsData = [
     phases: [
       {
         nom: "Gestion de Projet & Préparation",
-        duree: "6 heures",
         couleur: "blue",
         taches: [
           "Élaboration du diagramme de Gantt sur 36h",
@@ -729,7 +699,6 @@ export const achievementsData = [
       },
       {
         nom: "Exploration & Nettoyage des Données",
-        duree: "6 heures",
         couleur: "green",
         taches: [
           "Présentation générale du jeu de données hdv2003",
@@ -740,7 +709,6 @@ export const achievementsData = [
       },
       {
         nom: "Échantillonnage Statistique",
-        duree: "8 heures",
         couleur: "purple",
         taches: [
           "Implémentation du plan SAS PESR (Probabilités Égales Sans Remise)",
@@ -751,7 +719,6 @@ export const achievementsData = [
       },
       {
         nom: "Simulations & Validation",
-        duree: "8 heures",
         couleur: "orange",
         taches: [
           "Simulation Monte Carlo (1000 répétitions d'échantillonnage)",
@@ -762,7 +729,6 @@ export const achievementsData = [
       },
       {
         nom: "Collecte & Synthèse",
-        duree: "8 heures",
         couleur: "red",
         taches: [
           "Conception du questionnaire de 10 questions",
@@ -805,7 +771,6 @@ export const achievementsData = [
         "Acquisition de compétences recherchées en analyse d'enquêtes",
       ],
     },
-    duree: "36 heures (Projet universitaire semestriel)",
     images: [
       { url: "/img/sondage_loisir_immig_plot 1.png", alt: "", caption: "" },
       { url: "/img/sondage_loisir_immig_plot 2.png", alt: "", caption: "" },
@@ -846,7 +811,6 @@ export const achievementsData = [
     phases: [
       {
         nom: "Modélisation Conceptuelle",
-        duree: "1 semaine",
         couleur: "blue",
         taches: [
           "Analyse des besoins et spécifications données",
@@ -857,7 +821,6 @@ export const achievementsData = [
       },
       {
         nom: "Extraction des Données",
-        duree: "1 semaine",
         couleur: "green",
         taches: [
           "Recherche et collecte des données sur Breaking Bad",
@@ -868,7 +831,6 @@ export const achievementsData = [
       },
       {
         nom: "Transformation & Nettoyage",
-        duree: "1 semaine",
         couleur: "purple",
         taches: [
           "Implémentation des jobs FME de transformation",
@@ -879,7 +841,6 @@ export const achievementsData = [
       },
       {
         nom: "Implémentation BDD",
-        duree: "1 semaine",
         couleur: "orange",
         taches: [
           "Création de la base de données PostgreSQL",
@@ -890,7 +851,6 @@ export const achievementsData = [
       },
       {
         nom: "Documentation Technique",
-        duree: "1 semaine",
         couleur: "red",
         taches: [
           "Rédaction de la documentation complète",
@@ -931,7 +891,6 @@ export const achievementsData = [
         "Acquisition du badge universitaire en gestion de données",
       ],
     },
-    duree: "5 semaines (Projet universitaire semestriel)",
     images: [],
     contact: {
       nom: "Projet Universitaire - IUT SD",
@@ -941,6 +900,273 @@ export const achievementsData = [
       telephone: "Établissement universitaire",
       recommandation:
         "Ce projet de base de données sur Breaking Bad a démontré ma capacité à mener un projet complet de gestion de données, de la modélisation conceptuelle à l'implémentation technique. La maîtrise des outils ETL, la conception de modèles complexes et la rédaction d'une documentation technique détaillée ont été particulièrement valorisées dans l'évaluation académique.",
+    },
+  },
+  {
+    id: 8,
+    title: "Détection de Spam : NLP & Régression Logistique from scratch",
+    icon: <ShieldAlert className="w-6 h-6" />,
+    contexte:
+      "Projet personnel d'approfondissement en Machine Learning visant à déconstruire les boîtes noires des algorithmes. Implémentation manuelle d'un moteur de classification d'emails (Spam/Ham) en Python, incluant toute la chaîne de traitement NLP et la programmation mathématique des algorithmes d'optimisation (Descente de Gradient) sans recourir aux fonctions pré-câblées de Scikit-Learn pour l'entraînement.",
+    enjeuxEconomiques: [
+      "Compréhension mathématique profonde des algorithmes de classification binaire",
+      "Maîtrise des pipelines de pré-traitement textuel (NLP) et de vectorisation",
+      "Optimisation de code NumPy pour le calcul matriciel intensif",
+      "Capacité à auditer et interpréter des modèles de décision IA",
+    ],
+    objectifs: [
+      "Développer un nettoyeur de texte performant (Regex, Tokenization)",
+      "Implémenter une vectorisation 'Bag of Words' manuelle",
+      "Programmer les fonctions mathématiques (Sigmoïde, Coût, Gradient) en NumPy",
+      "Optimiser les hyperparamètres (Alpha) via une validation croisée personnalisée",
+      "Visualiser les données multidimensionnelles via réduction PCA",
+    ],
+    phases: [
+      {
+        nom: "Exploration & Nettoyage NLP",
+        couleur: "blue",
+        taches: [
+          "Analyse exploratoire du dataset 'emails.csv' (5700+ entrées)",
+          "Création de filtres Regex (suppression ponctuation, en-têtes)",
+          "Normalisation du texte et tokenisation",
+          "Analyse de fréquence des mots (Top 10 mots-clés)",
+        ],
+      },
+      {
+        nom: "Vectorisation & Mathématiques",
+        couleur: "purple",
+        taches: [
+          "Construction du vocabulaire unique",
+          "Encodage des messages en vecteurs binaires (Sparse Matrix)",
+          "Implémentation vectorisée de la fonction Sigmoïde",
+          "Codage de la fonction de coût Log-Loss et du Gradient",
+        ],
+      },
+      {
+        nom: "Entraînement & Optimisation",
+        couleur: "orange",
+        taches: [
+          "Développement de la boucle de Descente de Gradient",
+          "Mise en place d'une Validation Croisée (K-Fold, k=5)",
+          "Recherche de grille pour le Learning Rate (Alpha optimal : 5.8)",
+          "Réduction de dimension PCA pour visualisation 2D",
+        ],
+      },
+      {
+        nom: "Évaluation & Métriques",
+        couleur: "green",
+        taches: [
+          "Calcul des métriques (Précision, Rappel, F1-Score)",
+          "Génération de la courbe ROC et calcul de l'AUC",
+          "Matrice de confusion et analyse des Faux Positifs",
+          "Sauvegarde du modèle optimisé (Joblib)",
+        ],
+      },
+    ],
+    resultats: {
+      performance: [
+        "F1-Score moyen de 97.99% après validation croisée",
+        "Accuracy globale de 99.09% sur le jeu de test",
+        "ROC AUC parfaite de 1.00 démontrant une séparabilité idéale",
+        "Convergence stable de la fonction de coût validée graphiquement",
+      ],
+      business: [
+        "Algorithme de filtrage prêt pour le déploiement",
+        "Transparence totale du processus de décision",
+        "Code modulaire et réutilisable pour d'autres tâches de classification",
+        "Documentation technique complète via Notebook Jupyter",
+      ],
+      technique: [
+        "Pipeline 100% Python/NumPy sans dépendance 'boîte noire'",
+        "Traitement efficace de matrices de dimension 5000x3000+",
+        "Visualisation avancée (Seaborn, Matplotlib) des frontières de décision",
+        "Gestion robuste des encodages de fichiers et des erreurs",
+      ],
+    },
+    impacts: {
+      quantifies: [
+        "Taux de détection des Spams (Recall) de 97.59%",
+        "Précision de 98.42% (très peu de faux positifs)",
+        "Temps d'entraînement optimisé (~9 min pour validation complète)",
+      ],
+      reconnaissance: [
+        "Validation technique des compétences en algèbre linéaire appliquée",
+        "Projet démontrant une autonomie complète en Data Science",
+        "Maîtrise prouvée des concepts fondamentaux du Machine Learning",
+      ],
+    },
+    images: [
+      {
+        url: "/img/spam_class_dist.png",
+        alt: "Distribution des classes Ham vs Spam",
+        caption: "Déséquilibre des classes initial",
+      },
+      {
+        url: "/img/spam_top_words.png",
+        alt: "Mots les plus fréquents",
+        caption: "Analyse fréquentielle du corpus",
+      },
+      {
+        url: "/img/spam_msg_length.png",
+        alt: "Longueur des messages",
+        caption: "Corrélation longueur/spam",
+      },
+      {
+        url: "/img/spam_pca_vis.png",
+        alt: "Visualisation PCA",
+        caption: "Séparation des clusters en 2D",
+      },
+      {
+        url: "/img/spam_roc_curve.png",
+        alt: "Courbe ROC",
+        caption: "Performance parfaite (AUC = 1.00)",
+      },
+      {
+        url: "/img/spam_confusion_matrix.png",
+        alt: "Matrice de confusion",
+        caption: "Analyse fine des erreurs",
+      },
+    ],
+    contact: {
+      nom: "Projet Personnel - R&D",
+      projectLink:
+        "https://github.com/mawuli100dev-hue/henoc-learnia/tree/main/logistic_regression_data_treatment_email",
+      poste: "Étudiant en Data Science",
+      email: "ton.email@etudiant.univ-perp.fr",
+      telephone: "Portfolio Personnel",
+      recommandation:
+        "Ce projet atteste de ma capacité à aller au-delà de l'utilisation simple de librairies. En recodant les algorithmes fondamentaux (Régression Logistique, Gradient Descent), j'ai acquis une intuition fine des hyperparamètres et des mathématiques sous-jacentes, essentielle pour le débogage de modèles complexes en production.",
+    },
+  },
+  {
+    id: 9, // Ou l'ID suivant dans ta liste
+    title: "Prédiction de Prix Automobile : Régression Linéaire Univariée",
+    icon: <TrendingUp className="w-6 h-6" />,
+    contexte:
+      "Projet d'application des fondamentaux de l'économétrie et du Machine Learning sur le dataset 'CarPrice_Assignment'. L'objectif était de construire un modèle prédictif du prix des véhicules à partir de leurs caractéristiques techniques, en codant intégralement l'algorithme de descente de gradient pour comprendre la mécanique d'optimisation sous-jacente.",
+    enjeuxEconomiques: [
+      "Modélisation de la relation non-linéaire entre cylindrée et prix",
+      "Maîtrise des techniques de normalisation (Log-transformation) pour les distributions asymétriques",
+      "Implémentation manuelle des algorithmes d'optimisation (Gradient Descent)",
+      "Interprétation des coefficients d'élasticité-prix",
+    ],
+    objectifs: [
+      "Explorer les corrélations entre variables techniques et prix de vente",
+      "Traiter les valeurs aberrantes (Outliers) via la méthode Z-score",
+      "Linéariser les relations exponentielles par transformation logarithmique",
+      "Programmer 'from scratch' la fonction de coût (MSE) et la descente de gradient",
+      "Comparer la performance du modèle dans l'espace Log vs Réel",
+    ],
+    phases: [
+      {
+        nom: "Exploration & Nettoyage (EDA)",
+        couleur: "blue",
+        taches: [
+          "Analyse descriptive des 205 véhicules (statistiques, types)",
+          "Détection de corrélation forte entre 'enginesize' et 'price'",
+          "Identification de l'asymétrie des distributions (Skewness)",
+          "Visualisation des outliers par Boxplots",
+        ],
+      },
+      {
+        nom: "Feature Engineering Statistique",
+        couleur: "purple",
+        taches: [
+          "Application de la transformation Logarithmique (Log-Log) sur X et Y",
+          "Filtrage robuste des outliers (Z-score < 3) réduisant le dataset à 199 obs.",
+          "Normalisation et redimensionnement matriciel (Reshape)",
+          "Ajout du biais (Intercept) à la matrice des features",
+        ],
+      },
+      {
+        nom: "Modélisation Algorithmique",
+        couleur: "orange",
+        taches: [
+          "Implémentation vectorielle du modèle linéaire (X @ Theta)",
+          "Codage manuel de la fonction de coût MSE (Mean Squared Error)",
+          "Développement de l'algorithme de Descente de Gradient",
+          "Entraînement sur 1000 itérations avec Learning Rate de 0.01",
+        ],
+      },
+      {
+        nom: "Validation & Inférence",
+        couleur: "green",
+        taches: [
+          "Calcul du coefficient de détermination R² (Code manuel)",
+          "Transformation inverse (Exponentielle) pour prédictions réelles",
+          "Comparaison des performances : R² Log (0.65) vs R² Réel (0.72)",
+          "Visualisation des résidus et de la droite de régression",
+        ],
+      },
+    ],
+    resultats: {
+      performance: [
+        "R² de 0.715 en échelle réelle, validant la puissance prédictive",
+        "Convergence stable de la fonction de coût atteinte rapidement",
+        "Élimination efficace des valeurs extrêmes (gain de robustesse)",
+        "Modèle capable de capturer la tendance exponentielle des prix",
+      ],
+      business: [
+        "Démonstration de la relation élastique entre puissance moteur et prix",
+        "Capacité à créer des modèles de pricing simples et interprétables",
+        "Maîtrise des outils mathématiques d'aide à la décision",
+        "Documentation claire du processus de transformation de données",
+      ],
+      technique: [
+        "Implémentation NumPy pure sans dépendance à Scikit-Learn pour l'optimisation",
+        "Gestion avancée des transformations non-linéaires (Log-Log Regression)",
+        "Manipulation experte des tableaux multidimensionnels (Broadcasting)",
+        "Visualisation comparative des espaces de projection (Log vs Réel)",
+      ],
+    },
+    impacts: {
+      quantifies: [
+        "Amélioration de la linéarité du modèle grâce au passage au Log",
+        "Précision de 71.5% sur la variance du prix expliquée par la taille moteur",
+        "Traitement automatisé de 205 fiches techniques automobiles",
+      ],
+      reconnaissance: [
+        "Validation de la compréhension des modèles de régression simple",
+        "Preuve de compétence en prétraitement statistique avancé",
+        "Projet illustrant parfaitement le compromis Biais-Variance",
+      ],
+    },
+    images: [
+      {
+        url: "/img/car_price_dist.png",
+        alt: "Distribution des Prix",
+        caption: "Asymétrie initiale des prix",
+      },
+      {
+        url: "/img/car_scatter_raw.png",
+        alt: "Nuage de points Brut",
+        caption: "Relation curviligne Enginesize vs Price",
+      },
+      {
+        url: "/img/car_scatter_log.png",
+        alt: "Nuage de points Log",
+        caption: "Linéarisation après transformation Log",
+      },
+      {
+        url: "/img/car_cost_history.png",
+        alt: "Descente de Gradient",
+        caption: "Convergence de la fonction de coût",
+      },
+      {
+        url: "/img/car_reg_fit.png",
+        alt: "Régression Finale",
+        caption: "Ajustement du modèle aux données réelles",
+      },
+    ],
+    contact: {
+      nom: "Projet Personnel - R&D",
+      projectLink:
+        "https://github.com/mawuli100dev-hue/henoc-learnia/tree/main/car_price_reg",
+      poste: "Étudiant en Data Science",
+      email: "ton.email@etudiant.univ-perp.fr",
+      telephone: "Portfolio Personnel",
+      recommandation:
+        "Ce projet m'a permis de toucher du doigt l'importance cruciale du prétraitement des données en régression. En constatant que le R² passait de médiocre à 0.715 simplement grâce à une transformation Log et un nettoyage Z-score, j'ai compris que la qualité des données prévaut souvent sur la complexité de l'algorithme.",
     },
   },
 ];
