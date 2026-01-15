@@ -148,7 +148,7 @@ export const achievementsData = [
       },
     ],
     contact: {
-      nom: "Projet de formation",
+      nom: "Projet freelance",
       projectLink: "",
       poste: "Développement Backend",
       email: "contact@monportfolio.com",
@@ -295,9 +295,9 @@ export const achievementsData = [
       },
     ],
     contact: {
-      nom: "Projet de formation",
-      projectLink: "",
-      poste: "Développement Backend",
+      nom: "Projet freelance",
+      projectLink: "https://tournoi-amitie.vercel.app/",
+      poste: "Développement",
       email: "contact@monportfolio.com",
       telephone: "Sur demande",
       recommandation:
@@ -410,8 +410,8 @@ export const achievementsData = [
     },
     images: [],
     contact: {
-      nom: "Projet de formation",
-      projectLink: "",
+      nom: "Projet freelance",
+      projectLink: "https://github.com/mawuli100dev-hue/eklesia.git",
       poste: "Développement Backend",
       email: "contact@monportfolio.com",
       telephone: "Sur demande",
@@ -526,8 +526,8 @@ export const achievementsData = [
     },
     images: [],
     contact: {
-      nom: "Projet de formation",
-      projectLink: "",
+      nom: "Projet personnel",
+      projectLink: "https://github.com/mawuli100dev-hue/ecommerce-backend.git",
       poste: "Développement Backend",
       email: "contact@monportfolio.com",
       telephone: "Sur demande",
@@ -891,7 +891,12 @@ export const achievementsData = [
         "Acquisition du badge universitaire en gestion de données",
       ],
     },
-    images: [],
+    images: [
+      { url: "/img/breaking1.png", alt: "", caption: "" },
+      { url: "/img/breaking2.png", alt: "", caption: "" },
+      { url: "/img/breaking3.png", alt: "", caption: "" },
+      { url: "/img/breaking4.png", alt: "", caption: "" },
+    ],
     contact: {
       nom: "Projet Universitaire - IUT SD",
       projectLink: "",
