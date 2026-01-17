@@ -70,7 +70,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="flex justify-center space-x-6">
               <a
-                href="https://www.linkedin.com/in/ayi-mawuli-amavigan-335646394"
+                href="https://www.linkedin.com/in/h%C3%A9noc-amavigan-335646394/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-blue-500 transition-colors"
