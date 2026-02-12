@@ -19,6 +19,7 @@ import {
   FaTwitter,
   FaInstagram,
   FaFacebook,
+  FaFileAlt,
 } from "react-icons/fa";
 import Image from "next/image";
 import Achievements from "./components/sections/Achievements";
@@ -92,6 +93,9 @@ export default function Home() {
                 className="hover:text-green-500 transition-colors"
               >
                 <FaWhatsapp size={30} />
+              </a>
+              <a href="/cv" className="hover:text-red-500 transition-colors">
+                <FaFileAlt size={30} />
               </a>
             </div>
             <div className="text-center mt-4">
