@@ -4,6 +4,7 @@ import {
   Brain,
   Database,
   Home,
+  Leaf,
   ShieldAlert,
   ShoppingCart,
   TrendingUp,
@@ -11,6 +12,136 @@ import {
 } from "lucide-react";
 
 export const achievementsData = [
+  {
+    id: 10,
+    title: "ANTICI'PYR - Dashboard Botanique Pyrénéen (stage)",
+    icon: <Leaf className="w-6 h-6" />,
+    contexte:
+      "Développement d'un tableau de bord interactif pour le projet de thèse ANTICI'PYR de Noémie Collette, visant à visualiser l'impact du changement climatique sur 59 espèces endémiques et menacées des Pyrénées. Le dashboard permet d'explorer les modèles de distribution d'espèces sous différents scénarios climatiques SSP, avec cartographie raster géoréférencée et interface multilingue.",
+    enjeuxEconomiques: [
+      "Valorisation scientifique des données de modélisation pour la conservation de la biodiversité pyrénéenne",
+      "Accessibilité des résultats de recherche pour les gestionnaires d'espaces naturels protégés",
+      "Support à la prise de décision pour les politiques de conservation transfrontalières (France, Espagne, Andorre)",
+      "Intégration prévue dans le site Floralab+",
+    ],
+    objectifs: [
+      "Visualiser les projections de distribution d'espèces végétales sous scénarios SSP 126, 245, 370 et 585",
+      "Afficher les cartes raster actuelles et futures par horizon temporel (2030, 2050, 2070, 2090)",
+      "Proposer une interface multilingue (français, anglais, espagnol, catalan)",
+      "Permettre l'ajout de nouvelles espèces via une interface d'administration sans modification de code",
+      "Générer des fiches PDF téléchargeables par espèce avec cartographie intégrée",
+    ],
+    phases: [
+      {
+        nom: "Exploration & Architecture",
+        couleur: "blue",
+        taches: [
+          "Analyse des données cartographiques",
+          "Définition de la structure de données par espèce",
+          "Mise en place de l'architecture modulaire du projet",
+          "Choix des bibliothèques GIS : Cartopy, Folium, GeoPandas",
+        ],
+      },
+      {
+        nom: "Développement Cartographie",
+        couleur: "green",
+        taches: [
+          "Rendu raster géoréférencé avec Cartopy",
+          "Cartes interactives Folium avec overlay TIFF",
+          "Gestion de l'opacité RGBA au niveau image",
+          "Export cartographique PNG avec projection Pyrénées correcte",
+        ],
+      },
+      {
+        nom: "Interface & Multilingue",
+        couleur: "purple",
+        taches: [
+          "Sidebar avec sélecteur d'espèce, période et scénario SSP",
+          "Système de traduction",
+          "Onboarding modal avec navigation multi-étapes",
+          "Onglets Carte de répartition, SSP et Interprétation",
+        ],
+      },
+      {
+        nom: "Interface d'administration",
+        couleur: "orange",
+        taches: [
+          "Formulaire d'upload de dossiers espèces zippés",
+          "Validation de la structure interne des dossiers",
+          "Dépôt automatique sur bucket Backblaze",
+        ],
+      },
+      {
+        nom: "Génération PDF & Déploiement",
+        couleur: "red",
+        taches: [
+          "Génération de fiches PDF par espèce avec ReportLab",
+          "Ratio cartographique Pyrénées",
+          "Déploiement du dashboard sur le Cloud",
+          "Tests multilingues et validation des 59 espèces",
+        ],
+      },
+    ],
+    resultats: {
+      performance: [
+        "Chargement des cartes raster sans déformation de projection",
+        "Export PDF avec cartographie géoréférencée en ratio Pyrénées",
+        "Interface réactive sur tous devices avec sidebar dynamique",
+        "Chargement dynamique des espèces depuis le bucket Backblaze sans redéploiement",
+      ],
+      business: [
+        "59 espèces endémiques pyrénéennes visualisables",
+        "4 scénarios climatiques SSP couvrant 2030 à 2090",
+        "Interface accessible en français, anglais, espagnol et catalan",
+        "Ajout d'espèces autonome par les chercheurs via l'interface admin",
+      ],
+      technique: [
+        "Architecture modulaire : core/, ui/, assets/ bien séparés",
+        "Traductions découplées du code via un fichier centralisé",
+        "Stockage distant des données cartographiques sur Backblaze",
+        "Gestion RGBA native pour l'opacité raster sans double couche Folium",
+      ],
+    },
+    impacts: {
+      quantifies: [
+        "59 espèces modélisées et visualisables sur le dashboard",
+        "4 langues supportées pour une couverture transfrontalière (FR, EN, ES, CAT)",
+        "4 horizons temporels (2030-2090) et 4 scénarios SSP accessibles",
+        "100% des espèces ajoutables sans intervention sur le code",
+      ],
+      reconnaissance: [
+        "Intégration dans le site Floralab+ de l'Université de Perpignan",
+        "Outil de communication scientifique pour la thèse ANTICI'PYR",
+        "Support à la conservation de la biodiversité pyrénéenne endémique",
+      ],
+    },
+    images: [
+      {
+        url: "/img/anticipyr0.png",
+        alt: "",
+        caption: "",
+      },
+      {
+        url: "/img/anticipyr1.png",
+        alt: "",
+        caption: "",
+      },
+      {
+        url: "/img/anticipyr2.png",
+        alt: "",
+        caption: "",
+      },
+    ],
+    contact: {
+      nom: "Stage - LBCO / Université de Perpignan",
+      projectLink: "https://dashanticipyr-rdfsittsujgfzbkbd5hxk8.streamlit.app",
+      poste: "Développement Dashboard Scientifique",
+      email: "contact@monportfolio.com",
+      telephone: "Sur demande",
+      recommandation:
+        "Ce projet démontre ma capacité à produire un outil de dataviz scientifique complet, du traitement de données raster géoréférencées jusqu'au déploiement cloud. L'architecture modulaire, le système multilingue découplé et l'interface d'administration sans code illustrent une approche orientée utilisateur final dans un contexte de recherche académique.",
+    },
+  },
   {
     id: 1,
     title: "Extase-Home, plateforme de Gestion Locative (freelance)",

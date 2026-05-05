@@ -12,9 +12,9 @@ export default function PersonalStrengths() {
   const passions = [
     {
       title: "Musique Instrumentale",
-      description: "Pratique du baryton, tuba et saxophone en ensemble musical",
+      description: "Pratique du baryton, tuba et guitare basse",
       icon: Music,
-      impact: "Développe la discipline, l'écoute active et le travail d'équipe",
+      impact: "Développe ma discipline, mon écoute active et le travail d'équipe",
       examples: [
         "Répétitions régulières avec un ensemble de cuivres local",
         "Apprentissage de partitions classiques et contemporaines",
@@ -24,11 +24,11 @@ export default function PersonalStrengths() {
     {
       title: "Cuisine du Monde",
       description:
-        "Découverte et recréation de spécialités culinaires internationales",
+        "Découverte et recréation de spécialités culinaires",
       icon: ChefHat,
-      impact: "Stimule la créativité et l'ouverture d'esprit interculturelle",
+      impact: "Stimule ma créativité et mon ouverture d'esprit interculturelle",
       examples: [
-        "Masterclass de plats africains, asiatiques et européens",
+        "Apprentissage de plats africains, asiatiques et européens",
         "Expérimentation avec des épices et techniques variées",
         "Création d'un carnet de recettes personnalisées",
       ],

@@ -13,6 +13,16 @@ import {
 export default function Education() {
   const formations = [
     {
+      diplome: "Stage en Sciences des Données",
+      ecole: "CEFREM - Centre de Formation et de Recherche sur les Environnements Méditerranéens",
+      annee: "2025-...",
+      description:
+        "Stage de recherche appliquée au sein d'un laboratoire spécialisé dans l'étude des environnements méditerranéens. Application des méthodes de data science et d'analyse de données à des problématiques environnementales et scientifiques.",
+      valeur:
+        "Mise en pratique des compétences en machine learning, traitement de données et visualisation dans un contexte de recherche réel. Développement de solutions data-driven pour l'analyse de données environnementales.",
+      lien: "https://cefrem.univ-perp.fr",
+    },
+    {
       diplome: "BUT en Science des Données",
       ecole: "Université Perpignan Via Domitia - Campus de Carcassonne",
       annee: "2025-...",
