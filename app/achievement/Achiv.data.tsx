@@ -9,6 +9,7 @@ import {
   ShoppingCart,
   TrendingUp,
   Trophy,
+  Wind,
 } from "lucide-react";
 
 export const achievementsData = [
@@ -142,6 +143,161 @@ export const achievementsData = [
         "Ce projet démontre ma capacité à produire un outil de dataviz scientifique complet, du traitement de données raster géoréférencées jusqu'au déploiement cloud. L'architecture modulaire, le système multilingue découplé et l'interface d'administration sans code illustrent une approche orientée utilisateur final dans un contexte de recherche académique.",
     },
   },
+    {
+    id: 11,
+    title: "Dépôt de Poussière - Analyse Climatique Golfe du Lion (stage)",
+    icon: <Wind className="w-6 h-6" />,
+    contexte:
+        "Analyse et visualisation des flux de dépôt de poussières sahariennes sur le Golfe du Lion sur la période 1959–2024, à partir des sorties du modèle climatique régional ALADIN, des données de réanalyse CAMS (2019–2025) et des observations in situ du réseau MOOSE (Cap Frioul, Cap Bear, 2007–2024). Le projet vise à quantifier les dépôts secs et humides, évaluer les biais du modèle, et identifier les tendances long-terme et la variabilité saisonnière du dépôt atmosphérique de poussières désertiques en Méditerranée nord-occidentale.",
+    enjeuxEconomiques: [
+        "Compréhension de l'apport en nutriments (Fe, P) aux eaux du Golfe du Lion via les dépôts sahariennes",
+        "Évaluation de l'impact des poussières désertiques sur la productivité biologique marine et les écosystèmes pélagiques",
+        "Support scientifique pour les modèles de qualité de l'air et les projections climatiques régionales en Méditerranée",
+        "Contribution aux rapports d'état de l'environnement marin dans le cadre du réseau MOOSE",
+    ],
+    objectifs: [
+        "Calculer les flux annuels de dépôt total, sec (drydust) et humide (wetdust) à partir des sorties ALADIN sur 1959–2024",
+        "Comparer les flux ALADIN aux observations MOOSE (Cap Frioul, Cap Bear) et aux réanalyses CAMS",
+        "Quantifier le biais relatif annuel ALADIN vs observations aux deux stations de mesure",
+        "Cartographier la distribution spatiale du dépôt total et de ses tendances linéaires sur le Golfe du Lion",
+        "Analyser la variabilité saisonnière et décennale du dépôt de poussières sur 65 ans",
+    ],
+    phases: [
+        {
+        nom: "Extraction & Préparation des Données",
+        couleur: "blue",
+        taches: [
+            "Extraction des variables drydust, wetdust, totaldust depuis les fichiers NetCDF ALADIN",
+            "Chargement et découpage spatial des données CAMS sur le domaine Golfe du Lion",
+            "Fusion des séries temporelles MOOSE (Cap Frioul, Cap Bear) avec les sorties modèles",
+            "Calcul des fractions dépôt sec/humide et des flux intégrés en MT/an",
+        ],
+        },
+        {
+        nom: "Analyse Statistique",
+        couleur: "green",
+        taches: [
+            "Calcul du biais relatif annuel ALADIN vs MOOSE : (ALADIN − OBS) / OBS × 100",
+            "Régression linéaire pixel-par-pixel pour la tendance long-terme 1959–2024",
+            "Calcul de la différence symétrique relative ALADIN vs CAMS sur 2019–2024",
+            "Moyennes décennales par période de 10 ans et moyennes saisonnières (DJF, MAM, JJA, SON)",
+        ],
+        },
+        {
+        nom: "Cartographie Spatiale",
+        couleur: "purple",
+        taches: [
+            "Projection et affichage des champs raster sur la grille ALADIN avec contours côtiers",
+            "Cartes du dépôt total annuel (2019–2024) et de la moyenne 1959–2024",
+            "Carte de la tendance linéaire pixel-par-pixel avec colorbar divergente",
+            "Cartes de la différence relative ALADIN–CAMS par année et en moyenne",
+        ],
+        },
+        {
+        nom: "Validation aux Points de Mesure",
+        couleur: "orange",
+        taches: [
+            "Extraction des valeurs modèle aux pixels correspondant à Cap Bear et Cap Frioul",
+            "Calcul du biais relatif annuel pour chaque station sur 2007–2024",
+            "Visualisation barres vertes/rouges (surestimation / sous-estimation)",
+            "Comparaison interannuelle ALADIN, CAMS et MOOSE en flux intégrés (MT/an)",
+        ],
+        },
+        {
+        nom: "Visualisation & Export",
+        couleur: "red",
+        taches: [
+            "Génération des figures multi-panneaux (saisonnier, décennal, annuel)",
+            "Export CSV des données fusionnées ALADIN / CAMS / MOOSE pour archivage",
+            "Mise en forme des figures pour intégration dans un rapport ou une publication",
+        ],
+        },
+    ],
+    resultats: {
+        performance: [
+        "Flux ALADIN stables autour de 0.15–0.28 MT/an sur 65 ans avec forte variabilité interannuelle",
+        "Biais ALADIN positifs dominants (surestimation) à Cap Bear sur la majorité des années 2007–2024",
+        "Dépôt sec largement dominant (~63–67% du total) sur l'ensemble du Golfe du Lion",
+        "Tendance à la baisse du dépôt détectée sur la majeure partie du golfe sur 1959–2024",
+        ],
+        business: [
+        "65 ans de données de dépôt modélisé (1959–2024) analysés et archivés",
+        "2 stations d'observation MOOSE validées (Cap Frioul, Cap Bear) sur 2007–2024",
+        "3 sources de données comparées : ALADIN, CAMS (2019–2025) et MOOSE",
+        "Variabilité saisonnière claire : dépôts maximaux au printemps (MAM) et à l'automne (SON)",
+        ],
+        technique: [
+        "Pipeline Python complet : xarray pour NetCDF, pandas pour les séries temporelles, matplotlib pour les figures",
+        "Calcul de tendance linéaire spatialisée via numpy.polyfit appliqué pixel par pixel",
+        "CSV de synthèse fusionné exporté avec toutes les variables clés par année",
+        "Découpage spatial du domaine Golfe du Lion appliqué de façon cohérente sur les trois sources",
+        ],
+    },
+    impacts: {
+        quantifies: [
+        "65 ans de données ALADIN analysés (1959–2024)",
+        "3 sources de données croisées : ALADIN, CAMS, MOOSE",
+        "Biais interannuels mesurés sur 2 stations : jusqu'à +132% (Cap Bear 2020) et −65% (Cap Frioul 2017)",
+        "4 saisons et 6 décennies documentées pour la variabilité du dépôt",
+        ],
+        reconnaissance: [
+        "Contribution à la base de données climatiques sur les aérosols désertiques en Méditerranée",
+        "Résultats exploitables pour les équipes de recherche MOOSE et de modélisation régionale",
+        "Support analytique pour des études d'impact des poussières sahariennes sur les écosystèmes marins",
+        ],
+    },
+    images: [
+        {
+        url: "/img/sno_moose_gdl_totaldust_fractions.png",
+        alt: "Fractions dépôt sec et humide ALADIN sur le Golfe du Lion 1959–2024",
+        caption: "Fraction dépôt sec (drydust/totaldust) et humide (wetdust/totaldust)",
+        },
+        {
+        url: "/img/sno_moose_gdl_dust_comparison.png",
+        alt: "Flux de dépôt de poussière MT/an - MOOSE, CAMS, ALADIN",
+        caption: "Comparaison des flux annuels ALADIN, CAMS et observations MOOSE",
+        },
+        {
+        url: "/img/sno_moose_gdl_point_bias.png",
+        alt: "Biais relatif ALADIN vs Observations Cap Bear et Cap Frioul",
+        caption: "Biais relatif annuel ALADIN vs MOOSE aux deux stations de mesure",
+        },
+        {
+        url: "/img/sno_moose_gdl_totaldust_years_2019_2024.png",
+        alt: "Dépôt total poussière ALADIN 2019–2024 et moyenne 1959–2024",
+        caption: "Cartographie annuelle du dépôt total et moyenne climatologique",
+        },
+        {
+        url: "/img/sno_moose_gdl_diff_relative_annuelle.png",
+        alt: "Différence symétrique relative ALADIN vs CAMS 2019–2024",
+        caption: "Comparaison spatiale ALADIN–CAMS par année et en moyenne",
+        },
+        {
+        url: "/img/sno_moose_gdl_trend_aladin.png",
+        alt: "Tendance linéaire dépôt poussière ALADIN 1959–2024",
+        caption: "Pente de la tendance linéaire pixel-par-pixel sur 65 ans",
+        },
+        {
+        url: "/img/sno_moose_gdl_totaldust_seasonal.png",
+        alt: "Moyennes saisonnières dépôt total ALADIN Golfe du Lion",
+        caption: "Cycle saisonnier du dépôt : hiver, printemps, été, automne",
+        },
+        {
+        url: "/img/sno_moose_gdl_totaldust_periods.png",
+        alt: "Moyennes décennales dépôt total ALADIN 1959–2024",
+        caption: "Évolution décennale du dépôt de poussière par périodes de 10 ans",
+        },
+    ],
+    contact: {
+        nom: "Projet - Analyse Climatique Aérosols Méditerranée",
+        projectLink: "",
+        poste: "Analyse de données climatiques & Visualisation scientifique",
+        email: "contact@monportfolio.com",
+        telephone: "Sur demande",
+        recommandation:
+        "Ce projet démontre ma capacité à traiter et analyser des séries temporelles climatiques longues (65 ans) issues de modèles régionaux, à croiser plusieurs sources de données hétérogènes (modèle, réanalyse, observations terrain) et à produire des visualisations spatiales et statistiques de qualité publication. La rigueur méthodologique dans le calcul des biais, des tendances et des fractions illustre une maîtrise complète du pipeline d'analyse scientifique en Python.",
+    },
+},
   {
     id: 1,
     title: "Extase-Home, plateforme de Gestion Locative (freelance)",
