@@ -1,5 +1,6 @@
 import {
   BarChart3,
+  Bone,
   BookOpen,
   Brain,
   Database,
@@ -134,7 +135,7 @@ export const achievementsData = [
       },
     ],
     contact: {
-      nom: "Stage - LBCO / Université de Perpignan",
+      nom: "Stage - CEFREM / Université de Perpignan",
       projectLink: "https://dashanticipyr-rdfsittsujgfzbkbd5hxk8.streamlit.app",
       poste: "Développement Dashboard Scientifique",
       email: "contact@monportfolio.com",
@@ -241,7 +242,7 @@ export const achievementsData = [
         "4 saisons et 6 décennies documentées pour la variabilité du dépôt",
         ],
         reconnaissance: [
-        "Contribution à la base de données climatiques sur les aérosols désertiques en Méditerranée",
+        "Contribution à la base de données climatiques sur les aérosols désertiques en Méditerranée au CEFREM",
         "Résultats exploitables pour les équipes de recherche MOOSE et de modélisation régionale",
         "Support analytique pour des études d'impact des poussières sahariennes sur les écosystèmes marins",
         ],
@@ -297,6 +298,143 @@ export const achievementsData = [
         recommandation:
         "Ce projet démontre ma capacité à traiter et analyser des séries temporelles climatiques longues (65 ans) issues de modèles régionaux, à croiser plusieurs sources de données hétérogènes (modèle, réanalyse, observations terrain) et à produire des visualisations spatiales et statistiques de qualité publication. La rigueur méthodologique dans le calcul des biais, des tendances et des fractions illustre une maîtrise complète du pipeline d'analyse scientifique en Python.",
     },
+},
+{
+  id: 12,
+  title: "LYCAON BONE - Segmentation des morsures et analyse des pits (fémur, humérus, tibia, radius-ulna)",
+  icon: <Bone className="w-6 h-6" />,
+  contexte:
+    "Étude taphonomique des marques de morsure sur ossements de lycaon (Lycaon pictus). Deux verrous scientifiques : détecter automatiquement les zones de morsure (contour, polie, broyée) sur des photos d’os, et cartographier la répartition des micro-dépressions (« pits ») sur plusieurs types d’os longs (fémur, humérus, tibia, radius-ulna) à partir de données géospatiales et métriques.",
+  enjeuxEconomiques: [
+    "Automatiser l’analyse ostéologique pour accélérer les études archéozoologiques et paléontologiques",
+    "Fournir des visualisations reproductibles et quantifiables (heatmap, taille proportionnelle) pour publications scientifiques",
+    "Permettre des comparaisons inter‑os et inter‑individus sur les patterns de prédation",
+  ],
+  objectifs: [
+    "Segmenter les morsures sur images TIFF via SAM2, avec post‑traitements CLAHE et filtres morphologiques (circularité, surface, élancement)",
+    "Détecter trois zones distinctes : contour externe (vert), zone polie (cyan), zone broyée (orange)",
+    "Traiter l’ensemble des os longs (fémur, humérus, tibia, radius-ulna) à partir de shapefiles et GeoJSON",
+    "Joindre les mesures Leica (longueur/largeur des pits) depuis un fichier ODS",
+    "Générer pour chaque os une carte proportionnelle des pits (taille ∝ √(L×l)) et une heatmap de densité KDE masquée par le contour",
+  ],
+  phases: [
+    {
+      nom: "Prétraitement & segmentation SAM2",
+      couleur: "blue",
+      taches: [
+        "Normalisation TIFF → RGB + CLAHE (clip=3.0, tile=8×8)",
+        "Inférence SAM2 (points_per_batch=64, iou_thresh=0.70)",
+        "Filtrage des masques par ratio surface (0.5‑15%), circularité (>0.3), élancement (>0.3)",
+      ],
+    },
+    {
+      nom: "Zones polie & broyée",
+      couleur: "green",
+      taches: [
+        "Espace LAB : seuil haut de luminance (80e percentile) pour zone polie (cyan)",
+        "Variance locale (fenêtre 9×9) seuillée à 70e percentile pour zone broyée (orange)",
+        "Nettoyage morphologique et dessin des contours",
+      ],
+    },
+    {
+      nom: "Intégration géospatiale multi‑os",
+      couleur: "purple",
+      taches: [
+        "Chargement shapefile contour + GeoJSON points pour chaque os (fémur, humérus, tibia, radius‑ulna)",
+        "Filtrage des points « pits » et reprojection CRS homogène",
+        "Jointure avec tableur ODS (colonnes Longueur/Largeur Leica) sur (id, ID_Os)",
+      ],
+    },
+    {
+      nom: "Cartographie proportionnelle",
+      couleur: "orange",
+      taches: [
+        "Taille du marqueur : normalisation de √(Longueur×Largeur) entre 30 et 450 px",
+        "Carte colorée (YlOrRd) avec barre de graduation en mm",
+        "Légende discrète : Petite / Moyenne / Grande",
+      ],
+    },
+    {
+      nom: "Heatmap de densité KDE",
+      couleur: "red",
+      taches: [
+        "Estimation par noyau gaussien sur l’emprise du contour",
+        "Masquage des pixels hors os (shapely.union + contains)",
+        "Rendu pcolormesh (alpha=0.88, vmax=97e percentile) avec superposition des points",
+      ],
+    },
+  ],
+  resultats: {
+    performance: [
+      "Pipeline opérationnel sur CPU pour 185 images TIFF (segmentation SAM2 + post‑traitements)",
+      "Filtrage robuste éliminant les micro‑parasites et les faux contours",
+      "Heatmap KDE sans débordement hors du contour osseux",
+    ],
+    business: [
+      "4 types d’os longs analysés : fémur, humérus, tibia, radius‑ulna",
+      "Cartes reproductibles pour comparer la répartition et la taille des pits",
+      "Méthodologie transférable à d’autres collections ostéologiques",
+    ],
+    technique: [
+      "Pipeline TIFF → CLAHE → SAM2 → morphologie → export PNG",
+      "Intégration GeoPandas + Shapely + jointure ODS",
+      "Visualisations scientifiques : scatter proportionnel + heatmap masquée",
+    ],
+  },
+  impacts: {
+    quantifies: [
+      "185 photographies d’ossements traitées, avec détection de morsure >85%",
+      "4 os longs modélisés (fémur, humérus, tibia, radius‑ulna)",
+      "57 pits extraits et reliés à des mesures métriques réelles",
+      "3 sorties visuelles par os : contour simple, pits gradués, heatmap",
+    ],
+    reconnaissance: [
+      "Démonstration de SAM2 sur images archéozoologiques non annotées",
+      "Nouvelle méthode de distinction zone polie/broyée par luminance + variance locale",
+      "Outil géospatial inédit pour l’étude des pits sur canidés sauvages",
+    ],
+  },
+  images: [
+    {
+      url: "/img/seg_morsures_radio_ulna_contour_points.png",
+      alt: "",
+      caption: "",
+    },
+    {
+      url: "/img/seg_morsures_radio_ulna_heatmap.png",
+      alt: "",
+      caption: "",
+    },
+    {
+      url: "/img/seg_morsures_radio_ulna_pits_sized.png",
+      alt: "",
+      caption: "",
+    },
+    {
+      url: "/img/seg_morsures_traitement1.png",
+      alt: "",
+      caption: "",
+    },
+    {
+      url: "/img/seg_morsures_contour1.png",
+      alt: "",
+      caption: "",
+    },
+    {
+      url: "/img/seg_morsures_contour2.png",
+      alt: "",
+      caption: "",
+    },
+  ],
+  contact: {
+    nom: "Stage - Analyse taphonomique de morsures sur ossements de lycaon",
+    projectLink: "",
+    poste: "Data scientist / développeur scientifique",
+    email: "votre.email@exemple.com",
+    telephone: "Sur demande",
+    recommandation:
+      "Ce projet illustre ma capacité à combiner deep learning et analyse géospatiale (GeoPandas, KDE) sur des données réelles d’ossements. J’ai su adapter un modèle générique à des images osseuses via des critères morphologiques (circularité, surface) et extraire automatiquement trois zones fonctionnelles. Sur la partie géospatiale, j’ai intégré shapefiles, GeoJSON et tableur ODS pour produire des cartes proportionnelles et des heatmaps masquées, sur quatre types d’os longs. L’approche modulaire et documentée permet une réutilisation directe en archéozoologie.",
+  },
 },
   {
     id: 1,
