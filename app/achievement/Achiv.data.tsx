@@ -14,258 +14,265 @@ import {
 } from "lucide-react";
 
 export const achievementsData = [
-  {
-    id: 10,
-    title: "ANTICI'PYR - Dashboard Botanique Pyrénéen (stage)",
-    icon: <Leaf className="w-6 h-6" />,
-    contexte:
-      "59 espèces végétales endémiques des Pyrénées, menacées par le changement climatique. Des années de modélisation scientifique - mais aucun outil pour les rendre lisibles. Ma mission : transformer ces données en un dashboard interactif, capable de projeter l'avenir de chaque espèce sous quatre scénarios climatiques (SSP 126 à 585), de 2030 à 2090. Un outil pensé autant pour les chercheurs que pour les gestionnaires d'espaces naturels protégés des trois pays concernés.",
+    {
+        id: 10,
+        title: "ANTICI'PYR - Dashboard Botanique Pyrénéen (stage)",
+        icon: <Leaf className="w-6 h-6" />,
+        contexte:
+            "59 espèces végétales endémiques des Pyrénées, menacées par le changement climatique. Des années de modélisation scientifique - mais aucun outil pour les rendre lisibles. Ma mission : transformer ces données en un dashboard interactif, capable de projeter l'avenir de chaque espèce sous quatre scénarios climatiques (SSP 126 à 585), de 2030 à 2090. Un outil pensé autant pour les chercheurs que pour les gestionnaires d'espaces naturels protégés des trois pays concernés.",
 
-    enjeuxEconomiques: [
-      "Rendre les données de conservation exploitables pour les décideurs transfrontaliers (France, Espagne, Andorre)",
-      "Automatiser l'accès aux résultats sans passer par un développeur",
-      "Intégration prévue dans le site Floralab+ de l'Université de Perpignan",
-    ],
+        enjeuxEconomiques: [
+            "Rendre les données de conservation exploitables pour les décideurs transfrontaliers (France, Espagne, Andorre)",
+            "Automatiser l'accès aux résultats sans passer par un développeur",
+            "Intégration prévue dans le site Floralab+ de l'Université de Perpignan",
+        ],
 
-    objectifs: [
-      "Visualiser les projections de distribution d'espèces sous scénarios SSP 126, 245, 370 et 585",
-      "Afficher les cartes raster géoréférencées par horizon temporel (2030, 2050, 2070, 2090)",
-      "Proposer une interface multilingue (français, anglais, espagnol, catalan)",
-      "Permettre l'ajout autonome d'espèces via une interface d'administration - sans toucher au code",
-      "Générer des fiches PDF téléchargeables par espèce avec cartographie intégrée",
-    ],
+        objectifs: [
+            "Visualiser les projections de distribution d'espèces sous scénarios SSP 126, 245, 370 et 585",
+            "Afficher les cartes raster géoréférencées par horizon temporel (2030, 2050, 2070, 2090)",
+            "Proposer une interface multilingue (français, anglais, espagnol, catalan)",
+            "Permettre l'ajout autonome d'espèces via une interface d'administration - sans toucher au code",
+            "Générer des fiches PDF téléchargeables par espèce avec cartographie intégrée",
+        ],
 
-    phases: [
-      {
-        nom: "Exploration & Architecture",
-        couleur: "blue",
-        taches: [
-          "Analyse des données cartographiques et définition de la structure par espèce",
-          "Mise en place de l'architecture modulaire",
-          "Sélection des bibliothèques GIS : Cartopy, Folium, GeoPandas",
+        phases: [
+            {
+                nom: "Exploration & Architecture",
+                couleur: "blue",
+                taches: [
+                    "Analyse des données cartographiques et définition de la structure par espèce",
+                    "Mise en place de l'architecture modulaire",
+                    "Sélection des bibliothèques GIS : Cartopy, Folium, GeoPandas",
+                ],
+            },
+            {
+                nom: "Cartographie",
+                couleur: "green",
+                taches: [
+                    "Rendu raster géoréférencé avec projection correcte sur les Pyrénées",
+                    "Cartes interactives Folium avec overlay TIFF et gestion de l'opacité RGBA",
+                    "Export PNG sans déformation",
+                ],
+            },
+            {
+                nom: "Interface & Multilingue",
+                couleur: "purple",
+                taches: [
+                    "Sidebar avec sélecteur d'espèce, période et scénario SSP",
+                    "Système de traduction découplé du code (fichier centralisé)",
+                    "Onboarding modal multi-étapes pour les nouveaux utilisateurs",
+                ],
+            },
+            {
+                nom: "Administration",
+                couleur: "orange",
+                taches: [
+                    "Formulaire d'upload de dossiers espèces zippés",
+                    "Validation de la structure et dépôt automatique sur Backblaze",
+                ],
+            },
+            {
+                nom: "PDF & Déploiement",
+                couleur: "red",
+                taches: [
+                    "Génération de fiches PDF par espèce via ReportLab",
+                    "Déploiement cloud et validation des 59 espèces en multilingue",
+                ],
+            },
         ],
-      },
-      {
-        nom: "Cartographie",
-        couleur: "green",
-        taches: [
-          "Rendu raster géoréférencé avec projection correcte sur les Pyrénées",
-          "Cartes interactives Folium avec overlay TIFF et gestion de l'opacité RGBA",
-          "Export PNG sans déformation",
-        ],
-      },
-      {
-        nom: "Interface & Multilingue",
-        couleur: "purple",
-        taches: [
-          "Sidebar avec sélecteur d'espèce, période et scénario SSP",
-          "Système de traduction découplé du code (fichier centralisé)",
-          "Onboarding modal multi-étapes pour les nouveaux utilisateurs",
-        ],
-      },
-      {
-        nom: "Administration",
-        couleur: "orange",
-        taches: [
-          "Formulaire d'upload de dossiers espèces zippés",
-          "Validation de la structure et dépôt automatique sur Backblaze",
-        ],
-      },
-      {
-        nom: "PDF & Déploiement",
-        couleur: "red",
-        taches: [
-          "Génération de fiches PDF par espèce via ReportLab",
-          "Déploiement cloud et validation des 59 espèces en multilingue",
-        ],
-      },
-    ],
 
-    resultats: {
-      performance: [
-        "Cartes raster sans déformation de projection, ratio Pyrénées respecté",
-        "Interface réactive sur tous devices",
-        "Chargement dynamique depuis Backblaze - aucun redéploiement nécessaire pour ajouter une espèce",
-      ],
-      business: [
-        "59 espèces visualisables, 4 scénarios SSP, 4 horizons temporels",
-        "4 langues couvertes pour une portée transfrontalière réelle",
-        "Chercheurs autonomes pour enrichir le dashboard via l'interface admin",
-      ],
-      technique: [
-        "Architecture modulaire core / ui / assets bien séparée",
-        "Traductions découplées, stockage distant sur Backblaze",
-        "Gestion RGBA native pour l'opacité raster",
-      ],
+        resultats: {
+            performance: [
+                "Cartes raster sans déformation de projection, ratio Pyrénées respecté",
+                "Interface réactive sur tous devices",
+                "Chargement dynamique depuis Backblaze - aucun redéploiement nécessaire pour ajouter une espèce",
+            ],
+            business: [
+                "59 espèces visualisables, 4 scénarios SSP, 4 horizons temporels",
+                "4 langues couvertes pour une portée transfrontalière réelle",
+                "Chercheurs autonomes pour enrichir le dashboard via l'interface admin",
+            ],
+            technique: [
+                "Architecture modulaire core / ui / assets bien séparée",
+                "Traductions découplées, stockage distant sur Backblaze",
+                "Gestion RGBA native pour l'opacité raster",
+            ],
+        },
+
+        impacts: {
+            quantifies: [
+                "59 espèces modélisées et visualisables",
+                "4 langues, 4 horizons temporels, 4 scénarios climatiques",
+                "100% des espèces ajoutables sans intervention technique",
+            ],
+            reconnaissance: [
+                "Intégration prévue dans le site Floralab+ de l'Université de Perpignan",
+                "Outil de communication scientifique pour la thèse ANTICI'PYR",
+            ],
+        },
+
+        images: [
+            { url: "/img/anticipyr0.png", alt: "", caption: "" },
+            { url: "/img/anticipyr1.png", alt: "", caption: "" },
+            { url: "/img/anticipyr2.png", alt: "", caption: "" },
+        ],
+
+        contact: {
+            nom: "Stage - CEFREM / Université de Perpignan",
+            projectLink: "https://dashanticipyr-rdfsittsujgfzbkbd5hxk8.streamlit.app",
+            poste: "Développement Dashboard Scientifique",
+            email: "contact@monportfolio.com",
+            telephone: "Sur demande",
+            recommandation:
+                "Ce projet m'a appris à penser l'outil autant que la donnée. Traiter des rasters géoréférencés, gérer un système multilingue découplé et concevoir une interface d'administration pour des non-développeurs - c'est exactement ce que j'aime : quand la rigueur technique sert directement un usage concret.",
+        },
     },
 
-    impacts: {
-      quantifies: [
-        "59 espèces modélisées et visualisables",
-        "4 langues, 4 horizons temporels, 4 scénarios climatiques",
-        "100% des espèces ajoutables sans intervention technique",
-      ],
-      reconnaissance: [
-        "Intégration prévue dans le site Floralab+ de l'Université de Perpignan",
-        "Outil de communication scientifique pour la thèse ANTICI'PYR",
-      ],
-    },
+    {
+        id: 11,
+        title: "Dépôt de Poussières Sahariennes - Analyse Climatique (stage)",
+        icon: <Wind className="w-6 h-6" />,
 
-    images: [
-      { url: "/img/anticipyr0.png", alt: "", caption: "" },
-      { url: "/img/anticipyr1.png", alt: "", caption: "" },
-      { url: "/img/anticipyr2.png", alt: "", caption: "" },
-    ],
+        contexte:
+            "À partir de 65 ans de données climatiques issues du modèle régional ALADIN, des réanalyses CAMS et des observations du réseau MOOSE, l'objectif était d'évaluer les dépôts de poussières sahariennes sur plusieurs emprises d'étude (Golfe du Lion, bassin méditerranéen et bassin versant). J'ai développé un pipeline complet permettant d'harmoniser ces sources, de quantifier les biais, d'analyser la variabilité saisonnière, de cartographier les tendances à long terme et de comparer les comportements spatiaux des dépôts atmosphériques.",
 
-    contact: {
-      nom: "Stage - CEFREM / Université de Perpignan",
-      projectLink: "https://dashanticipyr-rdfsittsujgfzbkbd5hxk8.streamlit.app",
-      poste: "Développement Dashboard Scientifique",
-      email: "contact@monportfolio.com",
-      telephone: "Sur demande",
-      recommandation:
-        "Ce projet m'a appris à penser l'outil autant que la donnée. Traiter des rasters géoréférencés, gérer un système multilingue découplé et concevoir une interface d'administration pour des non-développeurs - c'est exactement ce que j'aime : quand la rigueur technique sert directement un usage concret.",
-    },
-  },
-
-  {
-    id: 11,
-    title: "Dépôt de Poussière - Analyse Climatique Golfe du Lion (stage)",
-    icon: <Wind className="w-6 h-6" />,
-    contexte:
-      "65 ans de données climatiques, trois sources hétérogènes (modèle ALADIN, réanalyse CAMS, observations terrain MOOSE), et une question centrale : combien de poussières sahariennes atteignent réellement le Golfe du Lion, et le modèle régional est-il fiable ? J'ai mis en place un pipeline d'analyse complet pour croiser ces données, quantifier les biais, cartographier les tendances long-terme et documenter la variabilité saisonnière des dépôts atmosphériques en Méditerranée nord-occidentale.",
-
-    enjeuxEconomiques: [
-      "Comprendre l'apport en nutriments (Fe, P) aux eaux du Golfe via les poussières - un enjeu direct pour les écosystèmes marins",
-      "Alimenter les modèles de qualité de l'air et les projections climatiques régionales",
-      "Contribuer aux rapports d'état de l'environnement marin du réseau MOOSE",
-    ],
-
-    objectifs: [
-      "Calculer les flux annuels de dépôt sec et humide à partir des sorties ALADIN sur 1959–2024",
-      "Quantifier le biais relatif ALADIN vs observations MOOSE aux deux stations (Cap Bear, Cap Frioul)",
-      "Cartographier la distribution spatiale et la tendance linéaire pixel-par-pixel sur 65 ans",
-      "Analyser la variabilité saisonnière et décennale des dépôts",
-      "Comparer ALADIN aux réanalyses CAMS sur 2019–2024",
-    ],
-
-    phases: [
-      {
-        nom: "Extraction & Préparation",
-        couleur: "blue",
-        taches: [
-          "Extraction des variables drydust, wetdust, totaldust depuis les NetCDF ALADIN",
-          "Découpage spatial du domaine Golfe du Lion sur les trois sources",
-          "Fusion des séries temporelles MOOSE avec les sorties modèles",
+        enjeuxEconomiques: [
+            "Mieux comprendre l'apport en nutriments (Fe, P) aux écosystèmes marins via les poussières sahariennes",
+            "Améliorer l'évaluation des modèles régionaux utilisés pour les études climatiques et de qualité de l'air",
+            "Contribuer aux travaux scientifiques du CEFREM et du réseau MOOSE sur l'évolution des dépôts atmosphériques",
         ],
-      },
-      {
-        nom: "Analyse Statistique",
-        couleur: "green",
-        taches: [
-          "Biais relatif annuel ALADIN vs MOOSE : (ALADIN − OBS) / OBS × 100",
-          "Régression linéaire pixel-par-pixel sur 65 ans (numpy.polyfit)",
-          "Moyennes décennales et saisonnières (DJF, MAM, JJA, SON)",
+
+        objectifs: [
+            "Calculer les flux annuels de dépôt sec, humide et total sur les différentes zones d'étude",
+            "Comparer les simulations ALADIN aux observations MOOSE et aux réanalyses CAMS",
+            "Cartographier les distributions spatiales, les moyennes climatologiques et les tendances sur 1959–2024",
+            "Analyser la variabilité saisonnière et décennale des dépôts atmosphériques",
+            "Évaluer la contribution relative des dépôts secs et humides selon les différentes emprises géographiques",
         ],
-      },
-      {
-        nom: "Cartographie Spatiale",
-        couleur: "purple",
-        taches: [
-          "Cartes du dépôt total annuel et de la moyenne climatologique 1959–2024",
-          "Carte de tendance avec colorbar divergente",
-          "Différence relative ALADIN–CAMS par année et en moyenne",
+
+        phases: [
+            {
+                nom: "Extraction & Préparation",
+                couleur: "blue",
+                taches: [
+                    "Extraction des variables drydust, wetdust et totaldust depuis les fichiers NetCDF ALADIN",
+                    "Préparation des jeux de données sur le Golfe du Lion, le bassin méditerranéen et le bassin versant",
+                    "Fusion des observations MOOSE avec les sorties ALADIN et CAMS",
+                ],
+            },
+            {
+                nom: "Analyse Statistique",
+                couleur: "green",
+                taches: [
+                    "Calcul du biais relatif entre ALADIN et les observations MOOSE",
+                    "Régression linéaire pixel par pixel sur 65 ans (numpy.polyfit)",
+                    "Calcul des moyennes annuelles, saisonnières et décennales",
+                ],
+            },
+            {
+                nom: "Cartographie Spatiale",
+                couleur: "purple",
+                taches: [
+                    "Production des cartes de flux moyens et des dépôts annuels sur les différentes zones d'étude",
+                    "Cartographie des tendances climatiques pixel par pixel",
+                    "Analyse spatiale des fractions de dépôt sec et humide",
+                ],
+            },
+            {
+                nom: "Validation & Export",
+                couleur: "orange",
+                taches: [
+                    "Comparaison interannuelle ALADIN, CAMS et MOOSE",
+                    "Visualisation des biais et des écarts entre les différentes sources",
+                    "Export automatisé des figures et des tableaux de synthèse (CSV)",
+                ],
+            },
         ],
-      },
-      {
-        nom: "Validation & Export",
-        couleur: "orange",
-        taches: [
-          "Biais relatif annuel visualisé par barres (surestimation / sous-estimation)",
-          "Comparaison interannuelle ALADIN, CAMS et MOOSE en flux intégrés (MT/an)",
-          "Export CSV de synthèse pour archivage et réutilisation",
+
+        resultats: {
+            performance: [
+                "Analyses réalisées sur trois emprises géographiques complémentaires",
+                "Flux ALADIN compris entre 0.15 et 0.28 MT/an selon les années",
+                "Dominance du dépôt sec sur l'ensemble des domaines étudiés",
+                "Tendance générale à la baisse des dépôts sur une grande partie des zones analysées",
+            ],
+
+            business: [
+                "65 années de données climatiques analysées",
+                "3 sources de données harmonisées (ALADIN, CAMS, MOOSE)",
+                "Analyses reproductibles sur plusieurs domaines géographiques",
+            ],
+
+            technique: [
+                "Pipeline Python automatisé (xarray, pandas, matplotlib)",
+                "Traitement multi-domaines avec analyses reproductibles",
+                "Calcul de tendances spatiales pixel par pixel",
+                "Export automatisé des cartes, graphiques et synthèses CSV",
+            ],
+        },
+
+        impacts: {
+            quantifies: [
+                "65 ans de données ALADIN traitées",
+                "3 domaines géographiques étudiés",
+                "2 stations MOOSE utilisées pour la validation",
+                "4 saisons et 6 décennies analysées",
+            ],
+
+            reconnaissance: [
+                "Contribution aux travaux scientifiques du CEFREM",
+                "Résultats exploitables pour les équipes MOOSE et de modélisation climatique régionale",
+            ],
+        },
+
+        images: [
+            {
+                url: "/img/sno_moose_flux_moyen_krige_1959_2024.png",
+                alt: "Flux annuel moyen krigé - Golfe du Lion",
+                caption: "Flux annuel moyen (Golfe du Lion)",
+            },
+            {
+                url: "/img/sno_moose_gdl_point_bias.png",
+                alt: "Comparaison ALADIN vs MOOSE",
+                caption: "Biais ALADIN / MOOSE",
+            },
+            {
+                url: "/img/sno_moose_gdl_totaldust_seasonal.png",
+                alt: "Variabilité saisonnière - Golfe du Lion",
+                caption: "Saisonnalité des dépôts (Golfe du Lion)",
+            },
+            {
+                url: "/img/sno_moose_gdl_trend_aladin.png",
+                alt: "Tendance ALADIN - Golfe du Lion",
+                caption: "Tendance des dépôts (Golfe du Lion)",
+            },
+            {
+                url: "/img/sno_moose_tendance_flux_annuelle.png",
+                alt: "Évolution annuelle des flux",
+                caption: "Évolution annuelle des flux",
+            },
+            {
+                url: "/img/sno_moose_totaldust_bassin_mediterraneen_fractions.png",
+                alt: "Fractions de dépôt - Bassin méditerranéen",
+                caption: "Dépôt sec / humide (Bassin méditerranéen)",
+            },
+            {
+                url: "/img/sno_moose_trend_aladin_bassin_mediterraneen.png",
+                alt: "Tendance ALADIN - Bassin méditerranéen",
+                caption: "Tendance des dépôts (Bassin méditerranéen)",
+            },
         ],
-      },
-    ],
 
-    resultats: {
-      performance: [
-        "Flux ALADIN stables entre 0.15 et 0.28 MT/an sur 65 ans, avec forte variabilité interannuelle",
-        "Dépôt sec dominant à ~63–67% du total sur l'ensemble du Golfe",
-        "Tendance à la baisse détectée sur la majeure partie du domaine",
-      ],
-      business: [
-        "65 ans de données archivées et analysées",
-        "2 stations MOOSE validées, 3 sources croisées",
-        "Saisonnalité documentée : maxima au printemps et en automne",
-      ],
-      technique: [
-        "Pipeline Python complet : xarray, pandas, matplotlib",
-        "Calcul de tendance spatialisée pixel par pixel",
-        "CSV de synthèse fusionné exporté pour toutes les variables clés",
-      ],
+        contact: {
+            nom: "Analyse Climatique Aérosols - CEFREM",
+            projectLink: "",
+            poste: "Analyse de données climatiques & Visualisation scientifique",
+            email: "contact@monportfolio.com",
+            telephone: "Sur demande",
+            recommandation:
+                "Ce projet m'a permis de développer un pipeline scientifique robuste pour analyser et comparer des données climatiques issues de modèles numériques, de réanalyses et d'observations terrain. Au-delà des traitements, il m'a appris à interpréter des résultats multi-sources, à documenter les incertitudes et à produire des visualisations reproductibles adaptées aux besoins de la recherche environnementale.",
+        },
     },
-
-    impacts: {
-      quantifies: [
-        "65 ans de données ALADIN traitées",
-        "Biais jusqu'à +132% (Cap Bear, 2020) et −65% (Cap Frioul, 2017)",
-        "4 saisons et 6 décennies documentées",
-      ],
-      reconnaissance: [
-        "Contribution à la base de données climatiques aérosols du CEFREM",
-        "Résultats exploitables pour les équipes MOOSE et de modélisation régionale",
-      ],
-    },
-
-    images: [
-        {
-            url: "/img/sno_moose_flux_moyen_krige_1959_2024.png",
-            alt: "Flux annuel moyen krigé (1959–2024)",
-            caption: "Flux annuel moyen krigé (1959–2024)"
-        },
-        {
-            url: "/img/sno_moose_gdl_point_bias.png",
-            alt: "Biais entre les points d'observation et les simulations",
-            caption: "Analyse des biais aux points d'observation"
-        },
-        {
-            url: "/img/sno_moose_gdl_totaldust_seasonal.png",
-            alt: "Variabilité saisonnière des dépôts de poussières",
-            caption: "Variabilité saisonnière des dépôts de poussières"
-        },
-        {
-            url: "/img/sno_moose_gdl_trend_aladin.png",
-            alt: "Tendance des dépôts simulés par ALADIN",
-            caption: "Tendance des dépôts ALADIN"
-        },
-        {
-            url: "/img/sno_moose_tendance_flux_annuelle.png",
-            alt: "Évolution du flux annuel",
-            caption: "Évolution du flux annuel"
-        },
-        {
-            url: "/img/sno_moose_totaldust_bassin_mediterraneen_fractions.png",
-            alt: "Fractions de dépôt dans le bassin méditerranéen",
-            caption: "Fractions dépôt sec / humide – bassin méditerranéen"
-        },
-        {
-            url: "/img/sno_moose_trend_aladin_bassin_mediterraneen.png",
-            alt: "Tendance des dépôts ALADIN dans le bassin méditerranéen",
-            caption: "Tendance ALADIN – bassin méditerranéen"
-        }
-    ],
-
-    contact: {
-      nom: "Analyse Climatique Aérosols - CEFREM / Méditerranée",
-      projectLink: "",
-      poste: "Analyse de données climatiques & Visualisation scientifique",
-      email: "contact@monportfolio.com",
-      telephone: "Sur demande",
-      recommandation:
-        "Ce projet m'a confronté à la vraie complexité du travail scientifique : des sources hétérogènes, des biais difficiles à interpréter, et la nécessité de produire des figures claires et rigoureuses. Croiser modèle, réanalyse et observations terrain, c'est apprendre à douter méthodiquement - et à documenter honnêtement ce qu'on trouve.",
-    },
-  },
 
   {
     id: 12,
