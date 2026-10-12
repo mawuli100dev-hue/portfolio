@@ -94,9 +94,9 @@ export default function Home() {
               >
                 <FaWhatsapp size={30} />
               </a>
-              <a href="/cv" className="hover:text-red-500 transition-colors">
+              {/* <a href="/cv" className="hover:text-red-500 transition-colors">
                 <FaFileAlt size={30} />
-              </a>
+              </a> */}
             </div>
             <div className="text-center mt-4">
               <p>&copy; {new Date().getFullYear()} - Tous droits réservés</p>

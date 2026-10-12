@@ -119,17 +119,17 @@ export const achievementsData = [
     },
     images: [
       {
-        url: "/img/anticipyr0.png",
+        url: "/img/anticipyr0.webp",
         alt: "",
         caption: "",
       },
       {
-        url: "/img/anticipyr1.png",
+        url: "/img/anticipyr1.webp",
         alt: "",
         caption: "",
       },
       {
-        url: "/img/anticipyr2.png",
+        url: "/img/anticipyr2.webp",
         alt: "",
         caption: "",
       },
@@ -259,7 +259,7 @@ export const achievementsData = [
         caption: "Comparaison des flux annuels ALADIN, CAMS et observations MOOSE",
         },
         {
-        url: "/img/sno_moose_gdl_point_bias.png",
+        url: "/img/sno_moose_gdl_point_bias.webp",
         alt: "Biais relatif ALADIN vs Observations Cap Bear et Cap Frioul",
         caption: "Biais relatif annuel ALADIN vs MOOSE aux deux stations de mesure",
         },
@@ -274,12 +274,12 @@ export const achievementsData = [
         caption: "Comparaison spatiale ALADIN–CAMS par année et en moyenne",
         },
         {
-        url: "/img/sno_moose_gdl_trend_aladin.png",
+        url: "/img/sno_moose_gdl_trend_aladin.webp",
         alt: "Tendance linéaire dépôt poussière ALADIN 1959–2024",
         caption: "Pente de la tendance linéaire pixel-par-pixel sur 65 ans",
         },
         {
-        url: "/img/sno_moose_gdl_totaldust_seasonal.png",
+        url: "/img/sno_moose_gdl_totaldust_seasonal.webp",
         alt: "Moyennes saisonnières dépôt total ALADIN Golfe du Lion",
         caption: "Cycle saisonnier du dépôt : hiver, printemps, été, automne",
         },
@@ -396,32 +396,32 @@ export const achievementsData = [
   },
   images: [
     {
-      url: "/img/seg_morsures_radio_ulna_contour_points.png",
+      url: "/img/seg_morsures_radio_ulna_contour_points.webp",
       alt: "",
       caption: "",
     },
     {
-      url: "/img/seg_morsures_radio_ulna_heatmap.png",
+      url: "/img/seg_morsures_radio_ulna_heatmap.webp",
       alt: "",
       caption: "",
     },
     {
-      url: "/img/seg_morsures_radio_ulna_pits_sized.png",
+      url: "/img/seg_morsures_radio_ulna_pits_sized.webp",
       alt: "",
       caption: "",
     },
     {
-      url: "/img/seg_morsures_traitement1.png",
+      url: "/img/seg_morsures_traitement1.webp",
       alt: "",
       caption: "",
     },
     {
-      url: "/img/seg_morsures_contour1.png",
+      url: "/img/seg_morsures_contour1.webp",
       alt: "",
       caption: "",
     },
     {
-      url: "/img/seg_morsures_contour2.png",
+      url: "/img/seg_morsures_contour2.webp",
       alt: "",
       caption: "",
     },
@@ -542,32 +542,32 @@ export const achievementsData = [
     },
     images: [
       {
-        url: "/img/extase-home0.png",
+        url: "/img/extase-home0.webp",
         alt: "",
         caption: "",
       },
       {
-        url: "/img/extase-home1.png",
+        url: "/img/extase-home1.webp",
         alt: "",
         caption: "",
       },
       {
-        url: "/img/extase-home3.png",
+        url: "/img/extase-home3.webp",
         alt: "",
         caption: "",
       },
       {
-        url: "/img/extase-home4.png",
+        url: "/img/extase-home4.webp",
         alt: "",
         caption: "",
       },
       {
-        url: "/img/extase-home5.png",
+        url: "/img/extase-home5.webp",
         alt: "",
         caption: "",
       },
       {
-        url: "/img/extase-home6.png",
+        url: "/img/extase-home6.webp",
         alt: "",
         caption: "",
       },
@@ -689,32 +689,32 @@ export const achievementsData = [
     },
     images: [
       {
-        url: "/img/tournoi-amitie1.png",
+        url: "/img/tournoi-amitie1.webp",
         alt: "",
         caption: "",
       },
       {
-        url: "/img/tournoi-amitie2.png",
+        url: "/img/tournoi-amitie2.webp",
         alt: "",
         caption: "",
       },
       {
-        url: "/img/tournoi-amitie3.png",
+        url: "/img/tournoi-amitie3.webp",
         alt: "",
         caption: "",
       },
       {
-        url: "/img/tournoi-amitie4.png",
+        url: "/img/tournoi-amitie4.webp",
         alt: "",
         caption: "",
       },
       {
-        url: "/img/tournoi-amitie5.png",
+        url: "/img/tournoi-amitie5.webp",
         alt: "",
         caption: "",
       },
       {
-        url: "/img/tournoi-amitie6.png",
+        url: "/img/tournoi-amitie6.webp",
         alt: "",
         caption: "",
       },
@@ -1064,23 +1064,23 @@ export const achievementsData = [
     },
     images: [
       {
-        url: "/img/ts_plumonie_plot1.png",
+        url: "/img/ts_plumonie_plot1.webp",
         alt: "",
         caption: "",
       },
-      { url: "/img/ts_plumonie_plot2.png", alt: "", caption: "" },
+      { url: "/img/ts_plumonie_plot2.webp", alt: "", caption: "" },
       {
-        url: "/img/ts_plumonie_plot3.png",
+        url: "/img/ts_plumonie_plot3.webp",
         alt: "",
         caption: "",
       },
-      { url: "/img/ts_plumonie_plot4.png", alt: "", caption: "" },
+      { url: "/img/ts_plumonie_plot4.webp", alt: "", caption: "" },
       {
-        url: "/img/ts_plumonie_plot5.png",
+        url: "/img/ts_plumonie_plot5.webp",
         alt: "",
         caption: "",
       },
-      { url: "/img/ts_plumonie_plot6.png", alt: "", caption: "" },
+      { url: "/img/ts_plumonie_plot6.webp", alt: "", caption: "" },
     ],
     contact: {
       nom: "Projet Universitaire - IUT SD",
@@ -1197,12 +1197,12 @@ export const achievementsData = [
       ],
     },
     images: [
-      { url: "/img/sondage_loisir_immig_plot 1.png", alt: "", caption: "" },
-      { url: "/img/sondage_loisir_immig_plot 2.png", alt: "", caption: "" },
-      { url: "/img/sondage_loisir_immig_plot 3.png", alt: "", caption: "" },
-      { url: "/img/sondage_loisir_immig_plot 4.png", alt: "", caption: "" },
-      { url: "/img/sondage_loisir_immig_plot 5.png", alt: "", caption: "" },
-      { url: "/img/sondage_loisir_immig_plot 6.png", alt: "", caption: "" },
+      { url: "/img/sondage_loisir_immig_plot_1.webp", alt: "", caption: "" },
+      { url: "/img/sondage_loisir_immig_plot_2.webp", alt: "", caption: "" },
+      { url: "/img/sondage_loisir_immig_plot_3.webp", alt: "", caption: "" },
+      { url: "/img/sondage_loisir_immig_plot_4.webp", alt: "", caption: "" },
+      { url: "/img/sondage_loisir_immig_plot_5.webp", alt: "", caption: "" },
+      { url: "/img/sondage_loisir_immig_plot_6.webp", alt: "", caption: "" },
     ],
     contact: {
       nom: "Projet Universitaire - IUT SD",
@@ -1317,10 +1317,10 @@ export const achievementsData = [
       ],
     },
     images: [
-      { url: "/img/breaking1.png", alt: "", caption: "" },
-      { url: "/img/breaking2.png", alt: "", caption: "" },
-      { url: "/img/breaking3.png", alt: "", caption: "" },
-      { url: "/img/breaking4.png", alt: "", caption: "" },
+      { url: "/img/breaking1.webp", alt: "", caption: "" },
+      { url: "/img/breaking2.webp", alt: "", caption: "" },
+      { url: "/img/breaking3.webp", alt: "", caption: "" },
+      { url: "/img/breaking4.webp", alt: "", caption: "" },
     ],
     contact: {
       nom: "Projet Universitaire - IUT SD",
@@ -1427,32 +1427,32 @@ export const achievementsData = [
     },
     images: [
       {
-        url: "/img/spam_class_dist.png",
+        url: "/img/spam_class_dist.webp",
         alt: "Distribution des classes Ham vs Spam",
         caption: "Déséquilibre des classes initial",
       },
       {
-        url: "/img/spam_top_words.png",
+        url: "/img/spam_top_words.webp",
         alt: "Mots les plus fréquents",
         caption: "Analyse fréquentielle du corpus",
       },
       {
-        url: "/img/spam_msg_length.png",
+        url: "/img/spam_msg_length.webp",
         alt: "Longueur des messages",
         caption: "Corrélation longueur/spam",
       },
       {
-        url: "/img/spam_pca_vis.png",
+        url: "/img/spam_pca_vis.webp",
         alt: "Visualisation PCA",
         caption: "Séparation des clusters en 2D",
       },
       {
-        url: "/img/spam_roc_curve.png",
+        url: "/img/spam_roc_curve.webp",
         alt: "Courbe ROC",
         caption: "Performance parfaite (AUC = 1.00)",
       },
       {
-        url: "/img/spam_confusion_matrix.png",
+        url: "/img/spam_confusion_matrix.webp",
         alt: "Matrice de confusion",
         caption: "Analyse fine des erreurs",
       },
@@ -1563,27 +1563,27 @@ export const achievementsData = [
     },
     images: [
       {
-        url: "/img/car_price_dist.png",
+        url: "/img/car_price_dist.webp",
         alt: "Distribution des Prix",
         caption: "Asymétrie initiale des prix",
       },
       {
-        url: "/img/car_scatter_raw.png",
+        url: "/img/car_scatter_raw.webp",
         alt: "Nuage de points Brut",
         caption: "Relation curviligne Enginesize vs Price",
       },
       {
-        url: "/img/car_scatter_log.png",
+        url: "/img/car_scatter_log.webp",
         alt: "Nuage de points Log",
         caption: "Linéarisation après transformation Log",
       },
       {
-        url: "/img/car_cost_history.png",
+        url: "/img/car_cost_history.webp",
         alt: "Descente de Gradient",
         caption: "Convergence de la fonction de coût",
       },
       {
-        url: "/img/car_reg_fit.png",
+        url: "/img/car_reg_fit.webp",
         alt: "Régression Finale",
         caption: "Ajustement du modèle aux données réelles",
       },

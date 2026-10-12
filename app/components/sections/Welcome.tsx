@@ -8,12 +8,12 @@ export default function Welcome() {
       {/* Container pour l'image et le dégradé */}
       <div className="absolute inset-0 w-full h-full -z-10">
         <Image
-          src="/img/1.png"
+          src="/img/1.webp"
           alt="Background"
           fill
           placeholder="blur"
           priority
-          blurDataURL={blurData["1.png"]}
+          blurDataURL={blurData["1.webp"]}
           className="object-cover"
           sizes="100vw"
         />
@@ -40,13 +40,13 @@ export default function Welcome() {
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center relative z-10 pt-16">
         <div className="md:w-1/2 mb-8 md:mb-0 relative">
           <Image
-            src="/img/0.png"
+            src="/img/0.webp"
             alt="Hénoc AMAVIGAN"
             width={400}
             height={400}
             placeholder="blur"
             priority
-            blurDataURL={blurData["0.png"]}
+            blurDataURL={blurData["0.webp"]}
             className="rounded-full shadow-lg relative z-20"
           />
         </div>

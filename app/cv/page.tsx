@@ -56,7 +56,7 @@ function CV() {
             <div className="bg-gradient-to-br from-slate-800 to-slate-900 text-white p-8 md:col-span-1">
               <div className="mb-8 flex justify-center">
                 <img
-                  src="/img/profil.png"
+                  src="/img/profil.webp"
                   alt="Profil"
                   className="w-48 h-48 rounded-full object-cover border-4 border-slate-600 shadow-xl"
                 />

@@ -9,6 +9,37 @@ import {
 export default function Experience() {
   const experiences = [
     {
+      poste: "Tuteur en informatique",
+      entreprise: "IUT de Perpignan, Antenne de Carcassonne",
+      periode: "Depuis 09/2026",
+      lieu: "Carcassonne, France",
+      description:
+        "Tutorat étudiant en programmation auprès des étudiants de BUT Science des Données",
+      valeur:
+        "Transmission des bases de la programmation et capacité à vulgariser des notions techniques",
+      lien: "https://formations.univ-perp.fr/diplome/but/but-science-des-donnees",
+      details: [
+        "Accompagnement pédagogique en programmation Python, R et autres langages",
+      ],
+    },
+    {
+      poste: "Projets personnels en IA, NLP et télédétection",
+      entreprise: "Développement indépendant",
+      periode: "08/2026 - 10/2026",
+      lieu: "France",
+      description:
+        "Conception de deux systèmes complémentaires d'analyse du renseignement : God's Eye sur l'imagerie satellite et Spirit Digger sur les textes en sources ouvertes",
+      valeur:
+        "Une boucle texte / image complète : une alerte textuelle génère une demande d'observation satellite, qui confirme ou infirme l'événement",
+      lien: "/achievement/14",
+      details: [
+        "God's Eye : détection d'objets YOLOv8 sur DOTA et xView (22 classes, mAP50 de 0,583) et suivi spatio-temporel T0 / T1 avec matrice de pondération des alertes",
+        "God's Eye v2 : analyse spatiale des transformations par appariement des objets, testée sur le barrage de Kakhovka à partir d'images Google Earth",
+        "Spirit Digger : chaîne NLP sur 382 000 messages Telegram et 2 236 articles de presse, alerte précoce non supervisée détectant 17 des 21 événements majeurs sans mot-clé",
+        "Spirit Digger : extraction d'entités (spaCy), graphe de relations (NetworkX), évaluation critique d'un détecteur de propagande et cotation des sources selon le code de l'Amirauté (OTAN)",
+      ],
+    },
+    {
       poste: "Développeur Fullstack Junior",
       entreprise: "Freelance & Projets Personnels",
       periode: "2023 - 2025",
@@ -78,7 +109,7 @@ export default function Experience() {
                   </div>
                   <a
                     href={exp.lien}
-                    target="_blank"
+                    target={exp.lien.startsWith("http") ? "_blank" : undefined}
                     rel="noopener noreferrer"
                     className="text-[#FFAA00] hover:text-[#11101D] transition-colors duration-200 transform hover:scale-110"
                   >

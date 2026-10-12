@@ -50,12 +50,12 @@ export default function Contact() {
     >
       <div className="absolute inset-0 w-full h-full -z-10">
         <Image
-          src="/img/footer.png"
+          src="/img/footer.webp"
           alt="Background"
           fill
           priority
           placeholder="blur"
-          blurDataURL={blurData["footer.png"]}
+          blurDataURL={blurData["footer.webp"]}
           className="object-cover"
           sizes="100vw"
         />

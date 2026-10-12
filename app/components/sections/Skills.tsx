@@ -11,6 +11,8 @@ import {
   Cog,
   Workflow,
   Cloud,
+  Radar,
+  Satellite,
 } from "lucide-react";
 
 export default function Skills() {
@@ -38,14 +40,45 @@ export default function Skills() {
       category: "Data Science",
       elements: [
         "Algorithmes de Machine Learning",
-        "Deep Learning (TensorFlow, Keras)",
+        "Deep Learning (YOLOv8, TensorFlow)",
         "Analyse de données avec Python/R",
         "Modélisation statistique",
+        "NLP : TF-IDF, classification de textes",
         "Visualisation de données",
         "Feature Engineering",
-        "Déploiement de modèles",
-        "Traitement de données massives",
+        "Évaluation critique de modèles (fuite, dérive)",
+        "Détection d'anomalies non supervisée",
         "Data Mining",
+      ],
+    },
+    {
+      id: 9,
+      name: "Renseignement OSINT & NLP",
+      category: "OSINT",
+      elements: [
+        "Chaîne de renseignement automatisée",
+        "Extraction d'entités nommées (spaCy)",
+        "Alerte précoce et signaux faibles",
+        "Analyse de réseaux d'acteurs (NetworkX)",
+        "Analyse des narratifs et désinformation",
+        "Cotation des sources (code de l'Amirauté)",
+        "Corpus multilingues (russe, ukrainien, anglais)",
+        "Recoupement multi-sources",
+      ],
+    },
+    {
+      id: 10,
+      name: "Vision par ordinateur & Télédétection",
+      category: "Télédétection",
+      elements: [
+        "Détection d'objets YOLOv8 (DOTA, xView)",
+        "Inférence par tuiles sur grandes images (SAHI)",
+        "Détection de changements T0 / T1",
+        "Segmentation d'images (SAM2, OpenCV)",
+        "Fusion texte / imagerie (GEOINT)",
+        "SIG : GeoPandas, Shapely, Cartopy, Folium",
+        "Rasters, Shapefile, GeoJSON, NetCDF",
+        "Cartographie spatio-temporelle",
       ],
     },
     {
@@ -152,6 +185,10 @@ export default function Skills() {
         return <Cloud className="w-6 h-6 text-white" />;
       case "Data Engineering":
         return <Workflow className="w-6 h-6 text-white" />;
+      case "OSINT":
+        return <Radar className="w-6 h-6 text-white" />;
+      case "Télédétection":
+        return <Satellite className="w-6 h-6 text-white" />;
       default:
         return <Cog className="w-6 h-6 text-white" />;
     }
@@ -207,6 +244,18 @@ export default function Skills() {
           bg: "from-pink-50 to-white",
           border: "border-pink-100",
           text: "text-pink-700",
+        };
+      case "OSINT":
+        return {
+          bg: "from-slate-50 to-white",
+          border: "border-slate-200",
+          text: "text-slate-700",
+        };
+      case "Télédétection":
+        return {
+          bg: "from-teal-50 to-white",
+          border: "border-teal-100",
+          text: "text-teal-700",
         };
       default:
         return {

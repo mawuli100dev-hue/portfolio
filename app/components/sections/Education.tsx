@@ -15,7 +15,7 @@ export default function Education() {
     {
       diplome: "Stage en Sciences des Données",
       ecole: "CEFREM - Centre de Formation et de Recherche sur les Environnements Méditerranéens",
-      annee: "2025-...",
+      annee: "04/2026 - 06/2026",
       description:
         "Stage de recherche appliquée au sein d'un laboratoire spécialisé dans l'étude des environnements méditerranéens. Application des méthodes de data science et d'analyse de données à des problématiques environnementales et scientifiques.",
       valeur:

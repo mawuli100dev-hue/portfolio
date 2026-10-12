@@ -120,12 +120,12 @@
 //     >
 //       <div className="absolute inset-0 w-full h-full -z-10">
 //         <Image
-//           src="/img/1.png"
+//           src="/img/1.webp"
 //           alt="Background"
 //           fill
 //           placeholder="blur"
 //           priority
-//           blurDataURL={blurData["1.png"]}
+//           blurDataURL={blurData["1.webp"]}
 //           className="object-cover"
 //           sizes="100vw"
 //         />

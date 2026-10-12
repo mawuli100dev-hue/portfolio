@@ -6,6 +6,8 @@ import {
   Database,
   Home,
   Leaf,
+  Radar,
+  Satellite,
   ShieldAlert,
   ShoppingCart,
   TrendingUp,
@@ -14,6 +16,233 @@ import {
 } from "lucide-react";
 
 export const achievementsData = [
+    {
+        id: 14,
+        title: "Spirit Digger - Renseignement OSINT par NLP (projet personnel)",
+        icon: <Radar className="w-6 h-6" />,
+        contexte:
+            "382 000 messages Telegram en russe, ukrainien et anglais sur la guerre en Ukraine, 2 236 articles de presse sur la crise Iran - États-Unis de 2026 : bien trop pour une lecture humaine. Spirit Digger joue le rôle d'un analyste de cellule de veille OSINT et automatise le cycle du renseignement sur du texte : collecte, nettoyage, extraction d'entités, alerte précoce, graphe de relations, analyse des narratifs, cotation des sources et rédaction d'un bulletin. Il est relié à God's Eye : une alerte textuelle génère une demande d'observation satellite. Le texte détecte, l'image confirme.",
+
+        enjeuxEconomiques: [
+            "Détecter les événements majeurs dans un flux massif de messages sans savoir à l'avance quoi chercher",
+            "Fournir des conclusions explicables et traçables : chaque alerte et chaque lien sont justifiés par leurs sources",
+            "Montrer les limites des détecteurs de désinformation et privilégier le recoupement multi-sources",
+        ],
+
+        objectifs: [
+            "Évaluer la fiabilité de chaque jeu de données avant analyse et démasquer les jeux synthétiques ou biaisés",
+            "Extraire acteurs, forces, armements, sites et navires avec spaCy enrichi d'un lexique militaire",
+            "Détecter sans mot-clé les ruptures de vocabulaire et la convergence de camps opposés",
+            "Construire un graphe de relations entre acteurs et révéler les liens indirects, sourcés phrase par phrase",
+            "Coter les alertes selon le code de l'Amirauté (OTAN) et produire des bulletins de renseignement",
+        ],
+
+        phases: [
+            {
+                nom: "Reconnaissance & Ingestion",
+                couleur: "blue",
+                taches: [
+                    "Cotation de chaque source, détection de 2 jeux synthétiques et de fuites de données",
+                    "Nettoyage, dédoublonnage et normalisation de 4 corpus en Parquet (PyArrow)",
+                ],
+            },
+            {
+                nom: "Inventaire & Alerte précoce",
+                couleur: "green",
+                taches: [
+                    "NER spaCy et lexique militaire, réunification des noms translittérés (Ghalibaf / Qalibaf)",
+                    "Score z sur une ligne de base de 28 jours et convergence de 5 camps de sources",
+                ],
+            },
+            {
+                nom: "Graphe de relations",
+                couleur: "purple",
+                taches: [
+                    "Co-citations pondérées par PMI, communautés Louvain et intermédiarité avec NetworkX",
+                    "Liens cachés justifiés par leur phrase source et carte interactive HTML (PyVis)",
+                ],
+            },
+            {
+                nom: "Guerre de l'information",
+                couleur: "orange",
+                taches: [
+                    "Détecteur de propagande 3 classes (TF-IDF, régression logistique), crash-test et dérive temporelle",
+                    "Narratifs opposés sur Kakhovka et Wagner par log-odds ratio, sans traduction automatique",
+                ],
+            },
+            {
+                nom: "Cotation & Bulletin",
+                couleur: "red",
+                taches: [
+                    "Cotation OTAN automatique et bulletins HTML imprimables au format BLUF",
+                    "Demandes d'observation satellite au format JSON envoyées à God's Eye",
+                ],
+            },
+        ],
+
+        resultats: {
+            performance: [
+                "17 des 21 événements majeurs de référence détectés sans mot-clé, au plus 1 jour après les faits",
+                "Barrage de Kakhovka : de 0 à 446 messages par jour, repris par les 5 camps, score d'alerte 355",
+                "Détecteur de propagande : 91 % d'exactitude en test, mais 22 % de faux positifs sur la presse de 2026",
+            ],
+            business: [
+                "210 alertes cotées selon le code de l'Amirauté, dont 128 en B1",
+                "Bulletins de renseignement générés automatiquement pour Kakhovka et la mutinerie Wagner",
+                "Chaîne réutilisable sur un nouveau théâtre sans réentraînement",
+            ],
+            technique: [
+                "82 192 mentions extraites, 10 986 entités distinctes, 50 personnes réunifiées malgré la translittération",
+                "Graphe de 386 acteurs, 8 sous-théâtres détectés sans supervision, 537 liens cachés sourcés",
+                "Fuite de données réduite de 31 % à 0,2 % dans le jeu d'entraînement",
+            ],
+        },
+
+        impacts: {
+            quantifies: [
+                "382 000 messages Telegram et 2 236 articles analysés",
+                "17 événements majeurs sur 21 détectés sans mot-clé",
+                "Exécution complète sur processeur, sans GPU, en une vingtaine de minutes",
+            ],
+            reconnaissance: [
+                "Méthodes explicables et frugales, adaptées aux exigences du renseignement",
+                "Boucle texte / image avec God's Eye, qui confirme la destruction du barrage de Kakhovka",
+            ],
+        },
+
+        images: [
+            { url: "/img/spirit_alertes.webp", alt: "Chronologie des alertes précoces", caption: "Alerte précoce : 17 événements sur 21 détectés sans mot-clé" },
+            { url: "/img/spirit_bulletin_1.webp", alt: "Bulletin de renseignement Kakhovka", caption: "Bulletin : Kakhovka, score 355, cotation B1" },
+            { url: "/img/spirit_bulletin_2.webp", alt: "Bulletin de renseignement", caption: "Bulletin de renseignement généré automatiquement" },
+            { url: "/img/spirit_inventaire.webp", alt: "Rapport d'inventaire des entités", caption: "Inventaire des acteurs du Golfe 2026 (NER)" },
+            { url: "/img/spirit_graphe_coeur.webp", alt: "Graphe de relations", caption: "Graphe de relations et sous-théâtres" },
+            { url: "/img/spirit_graphe_arbre.webp", alt: "Arbre du graphe de relations", caption: "Structure du réseau d'acteurs" },
+            { url: "/img/spirit_lien_cache.webp", alt: "Lien caché", caption: "Lien caché justifié par ses phrases sources" },
+            { url: "/img/spirit_kakhovka_recits.webp", alt: "Narratifs opposés sur Kakhovka", caption: "Guerre de l'information : chaque camp accuse l'autre" },
+            { url: "/img/spirit_analyse_texte.webp", alt: "Analyse d'un texte", caption: "Analyse d'un texte par le détecteur" },
+        ],
+
+        contact: {
+            nom: "Projet personnel - données publiques",
+            projectLink: "https://drive.google.com/drive/folders/1EQN5EOG4IFW_QjQKD4Or6Sz6LZah15_z?usp=sharing",
+            poste: "NLP & analyse du renseignement",
+            email: "contact@monportfolio.com",
+            telephone: "Sur demande",
+            recommandation:
+                "Venant de la vision par ordinateur, j'attendais un gros modèle. J'ai construit l'inverse : une chaîne de méthodes explicables, dont un seul modèle entraîné - et je montre justement pourquoi il ne faut pas lui faire confiance seul. En renseignement, un analyste doit pouvoir justifier chaque conclusion. Le système ne prédit pas, il détecte vite, et il le dit.",
+        },
+    },
+
+    {
+        id: 13,
+        title: "God's Eye - Détection d'objets sur imagerie satellite (projet personnel)",
+        icon: <Satellite className="w-6 h-6" />,
+        contexte:
+            "Comment repérer automatiquement ce qui a changé entre deux images satellite d'une même zone ? God's Eye est un agent de reconnaissance spatiale construit autour d'un modèle YOLOv8 que j'ai entraîné en fusionnant les bases DOTA et xView (22 classes, plus de 125 000 objets annotés). Il répond à quatre scénarios : inventaire d'une zone, évaluation des sinistres, violation de périmètre et corrélation d'une attaque. La version 2 ajoute une analyse spatiale des transformations, testée sur le barrage de Kakhovka à partir d'images Google Earth.",
+
+        enjeuxEconomiques: [
+            "Dresser un état des lieux instantané d'une zone d'intérêt à partir d'une seule image",
+            "Hiérarchiser automatiquement les changements entre deux dates pour déclencher les bonnes alertes",
+            "Documenter honnêtement les limites d'un modèle hors de son domaine d'entraînement",
+        ],
+
+        objectifs: [
+            "Fusionner DOTA et xView en un jeu unifié de 22 classes et entraîner YOLOv8",
+            "Analyser des images de très grande taille par découpage (SAHI) puis fusion des détections",
+            "Comparer des images T0 / T1 et pondérer chaque changement selon sa gravité",
+            "Isoler les intrusions par suivi des centroïdes et corréler intrusion et destruction",
+            "Apparier les objets T0 / T1 par recouvrement et rendre un verdict par objet (version 2)",
+        ],
+
+        phases: [
+            {
+                nom: "Données & Entraînement",
+                couleur: "blue",
+                taches: [
+                    "Conversion des annotations GeoJSON, remappage des classes, découpage des images en tuiles",
+                    "Entraînement YOLOv8 (640 px) sur DOTA + xView avec GPU Colab et Kaggle",
+                ],
+            },
+            {
+                nom: "Inventaire & Sinistres",
+                couleur: "green",
+                taches: [
+                    "Inférence par tuiles avec SAHI et rapport d'inventaire par classe",
+                    "Matrice de pondération : 0,1 pt pour un navire disparu, 10 pts pour un pont ou un bâtiment",
+                ],
+            },
+            {
+                nom: "Intrusion & Attaque",
+                couleur: "purple",
+                taches: [
+                    "Suivi spatial par centroïdes pour marquer les cibles « suspectes » apparues à T1",
+                    "Corrélation intrusion T1 / destruction T2 et focus automatique sur le suspect",
+                ],
+            },
+            {
+                nom: "Version 2 : Transformations",
+                couleur: "orange",
+                taches: [
+                    "Appariement par recouvrement : inchangé, disparu, transformation plausible ou incohérence du modèle",
+                    "Confirmation par une source indépendante : les alertes textuelles de Spirit Digger",
+                ],
+            },
+        ],
+
+        resultats: {
+            performance: [
+                "mAP50 global de 0,583 sur 22 classes",
+                "Jusqu'à 0,93-0,94 par classe : navires 0,925, terrains de tennis 0,939, avions 0,897",
+                "Classes difficiles documentées : chantiers 0,018, parkings 0,126",
+            ],
+            business: [
+                "4 scénarios opérationnels couverts, du simple inventaire à l'attaque corrélée",
+                "Rapports visuels générés automatiquement pour chaque alerte",
+                "Destruction du barrage de Kakhovka confirmée à partir d'une demande de Spirit Digger",
+            ],
+            technique: [
+                "Pipeline YOLOv8 + SAHI pour les images satellite de grande taille",
+                "Score de risque pondéré et verdicts par objet explicables",
+                "Analyse du data shift : écarts de résolution et d'étalonnage sur les captures Google Earth (cas de Beyrouth)",
+            ],
+        },
+
+        impacts: {
+            quantifies: [
+                "Plus de 125 000 objets annotés, 22 classes, 2 bases fusionnées",
+                "mAP50 de 0,583, jusqu'à 0,94 sur les meilleures classes",
+            ],
+            reconnaissance: [
+                "Présentation « God's Eye v2.0 » des 4 scénarios et de leurs limites",
+                "Interconnexion avec Spirit Digger : le texte détecte, l'image confirme",
+            ],
+        },
+
+        images: [
+            { url: "/img/godeye_kakhovka_1.webp", alt: "Analyse des transformations - Kakhovka", caption: "V2 : transformations sur le barrage de Kakhovka (T0 / T1)" },
+            { url: "/img/godeye_kakhovka_2.webp", alt: "Analyse des transformations - Kakhovka", caption: "V2 : verdicts par objet sur Kakhovka" },
+            { url: "/img/godeye_inventaire_1.webp", alt: "Rapport d'inventaire", caption: "Scénario 1 : inventaire de détection" },
+            { url: "/img/godeye_inventaire_2.webp", alt: "Rapport d'inventaire", caption: "Scénario 1 : inventaire de détection" },
+            { url: "/img/godeye_inventaire_3.webp", alt: "Rapport d'inventaire", caption: "Scénario 1 : inventaire de détection" },
+            { url: "/img/godeye_sinistre_1.webp", alt: "Alerte sinistre", caption: "Scénario 2 : évaluation des sinistres pondérée" },
+            { url: "/img/godeye_sinistre_2.webp", alt: "Alerte sinistre", caption: "Scénario 2 : évaluation des sinistres pondérée" },
+            { url: "/img/godeye_intrusion_1.webp", alt: "Alerte intrusion", caption: "Scénario 3 : violation de périmètre" },
+            { url: "/img/godeye_intrusion_2.webp", alt: "Alerte intrusion", caption: "Scénario 3 : violation de périmètre" },
+            { url: "/img/godeye_attaque_dashboard.webp", alt: "Dashboard attaque", caption: "Scénario 4 : corrélation intrusion / destruction" },
+            { url: "/img/godeye_beyrouth.webp", alt: "Port de Beyrouth", caption: "Limites : le cas du port de Beyrouth (data shift)" },
+        ],
+
+        contact: {
+            nom: "Projet personnel - développement indépendant",
+            projectLink: "https://drive.google.com/drive/folders/1EFdeOu23vmt9oy-gunEPF0C1ySC9Ay8y?usp=sharing",
+            poste: "Computer vision & télédétection",
+            email: "contact@monportfolio.com",
+            telephone: "Sur demande",
+            recommandation:
+                "Le moment le plus instructif de ce projet, c'est l'échec sur le port de Beyrouth : un modèle solide sur DOTA et xView perd pied sur des captures Google Earth. Comprendre ce data shift m'a appris plus qu'un bon score. C'est aussi ce qui a mené à la version 2 : un changement d'étiquette peut être un vrai changement ou une hésitation du modèle, et seule une source indépendante permet de trancher.",
+        },
+    },
+
     {
         id: 10,
         title: "ANTICI'PYR - Dashboard Botanique Pyrénéen (stage)",
@@ -24,7 +253,7 @@ export const achievementsData = [
         enjeuxEconomiques: [
             "Rendre les données de conservation exploitables pour les décideurs transfrontaliers (France, Espagne, Andorre)",
             "Automatiser l'accès aux résultats sans passer par un développeur",
-            "Intégration prévue dans le site Floralab+ de l'Université de Perpignan",
+            "Intégré au site FloraLab+ de l'Université de Perpignan",
         ],
 
         objectifs: [
@@ -106,20 +335,20 @@ export const achievementsData = [
                 "100% des espèces ajoutables sans intervention technique",
             ],
             reconnaissance: [
-                "Intégration prévue dans le site Floralab+ de l'Université de Perpignan",
+                "Intégré au site FloraLab+ de l'Université de Perpignan",
                 "Outil de communication scientifique pour la thèse ANTICI'PYR",
             ],
         },
 
         images: [
-            { url: "/img/anticipyr0.png", alt: "", caption: "" },
-            { url: "/img/anticipyr1.png", alt: "", caption: "" },
-            { url: "/img/anticipyr2.png", alt: "", caption: "" },
+            { url: "/img/anticipyr0.webp", alt: "", caption: "" },
+            { url: "/img/anticipyr1.webp", alt: "", caption: "" },
+            { url: "/img/anticipyr2.webp", alt: "", caption: "" },
         ],
 
         contact: {
             nom: "Stage - CEFREM / Université de Perpignan",
-            projectLink: "https://dashanticipyr-rdfsittsujgfzbkbd5hxk8.streamlit.app",
+            projectLink: "https://www.floralab.eu/modelisation-de-niches-ecologiques/",
             poste: "Développement Dashboard Scientifique",
             email: "contact@monportfolio.com",
             telephone: "Sur demande",
@@ -227,37 +456,37 @@ export const achievementsData = [
 
         images: [
             {
-                url: "/img/sno_moose_flux_moyen_krige_1959_2024.png",
+                url: "/img/sno_moose_flux_moyen_krige_1959_2024.webp",
                 alt: "Flux annuel moyen krigé - Golfe du Lion",
                 caption: "Flux annuel moyen (Golfe du Lion)",
             },
             {
-                url: "/img/sno_moose_gdl_point_bias.png",
+                url: "/img/sno_moose_gdl_point_bias.webp",
                 alt: "Comparaison ALADIN vs MOOSE",
                 caption: "Biais ALADIN / MOOSE",
             },
             {
-                url: "/img/sno_moose_gdl_totaldust_seasonal.png",
+                url: "/img/sno_moose_gdl_totaldust_seasonal.webp",
                 alt: "Variabilité saisonnière - Golfe du Lion",
                 caption: "Saisonnalité des dépôts (Golfe du Lion)",
             },
             {
-                url: "/img/sno_moose_gdl_trend_aladin.png",
+                url: "/img/sno_moose_gdl_trend_aladin.webp",
                 alt: "Tendance ALADIN - Golfe du Lion",
                 caption: "Tendance des dépôts (Golfe du Lion)",
             },
             {
-                url: "/img/sno_moose_tendance_flux_annuelle.png",
+                url: "/img/sno_moose_tendance_flux_annuelle.webp",
                 alt: "Évolution annuelle des flux",
                 caption: "Évolution annuelle des flux",
             },
             {
-                url: "/img/sno_moose_totaldust_bassin_mediterraneen_fractions.png",
+                url: "/img/sno_moose_totaldust_bassin_mediterraneen_fractions.webp",
                 alt: "Fractions de dépôt - Bassin méditerranéen",
                 caption: "Dépôt sec / humide (Bassin méditerranéen)",
             },
             {
-                url: "/img/sno_moose_trend_aladin_bassin_mediterraneen.png",
+                url: "/img/sno_moose_trend_aladin_bassin_mediterraneen.webp",
                 alt: "Tendance ALADIN - Bassin méditerranéen",
                 caption: "Tendance des dépôts (Bassin méditerranéen)",
             },
@@ -360,12 +589,12 @@ export const achievementsData = [
     },
 
     images: [
-      { url: "/img/seg_morsures_radio_ulna_contour_points.png", alt: "", caption: "" },
-      { url: "/img/seg_morsures_radio_ulna_heatmap.png", alt: "", caption: "" },
-      { url: "/img/seg_morsures_radio_ulna_pits_sized.png", alt: "", caption: "" },
-      { url: "/img/seg_morsures_traitement1.png", alt: "", caption: "" },
-      { url: "/img/seg_morsures_contour1.png", alt: "", caption: "" },
-      { url: "/img/seg_morsures_contour2.png", alt: "", caption: "" },
+      { url: "/img/seg_morsures_radio_ulna_contour_points.webp", alt: "", caption: "" },
+      { url: "/img/seg_morsures_radio_ulna_heatmap.webp", alt: "", caption: "" },
+      { url: "/img/seg_morsures_radio_ulna_pits_sized.webp", alt: "", caption: "" },
+      { url: "/img/seg_morsures_traitement1.webp", alt: "", caption: "" },
+      { url: "/img/seg_morsures_contour1.webp", alt: "", caption: "" },
+      { url: "/img/seg_morsures_contour2.webp", alt: "", caption: "" },
     ],
 
     contact: {
@@ -459,12 +688,12 @@ export const achievementsData = [
     },
 
     images: [
-      { url: "/img/extase-home0.png", alt: "", caption: "" },
-      { url: "/img/extase-home1.png", alt: "", caption: "" },
-      { url: "/img/extase-home3.png", alt: "", caption: "" },
-      { url: "/img/extase-home4.png", alt: "", caption: "" },
-      { url: "/img/extase-home5.png", alt: "", caption: "" },
-      { url: "/img/extase-home6.png", alt: "", caption: "" },
+      { url: "/img/extase-home0.webp", alt: "", caption: "" },
+      { url: "/img/extase-home1.webp", alt: "", caption: "" },
+      { url: "/img/extase-home3.webp", alt: "", caption: "" },
+      { url: "/img/extase-home4.webp", alt: "", caption: "" },
+      { url: "/img/extase-home5.webp", alt: "", caption: "" },
+      { url: "/img/extase-home6.webp", alt: "", caption: "" },
     ],
 
     contact: {
@@ -550,12 +779,12 @@ export const achievementsData = [
     },
 
     images: [
-      { url: "/img/tournoi-amitie1.png", alt: "", caption: "" },
-      { url: "/img/tournoi-amitie2.png", alt: "", caption: "" },
-      { url: "/img/tournoi-amitie3.png", alt: "", caption: "" },
-      { url: "/img/tournoi-amitie4.png", alt: "", caption: "" },
-      { url: "/img/tournoi-amitie5.png", alt: "", caption: "" },
-      { url: "/img/tournoi-amitie6.png", alt: "", caption: "" },
+      { url: "/img/tournoi-amitie1.webp", alt: "", caption: "" },
+      { url: "/img/tournoi-amitie2.webp", alt: "", caption: "" },
+      { url: "/img/tournoi-amitie3.webp", alt: "", caption: "" },
+      { url: "/img/tournoi-amitie4.webp", alt: "", caption: "" },
+      { url: "/img/tournoi-amitie5.webp", alt: "", caption: "" },
+      { url: "/img/tournoi-amitie6.webp", alt: "", caption: "" },
     ],
 
     contact: {
@@ -797,12 +1026,12 @@ export const achievementsData = [
     },
 
     images: [
-      { url: "/img/ts_plumonie_plot1.png", alt: "", caption: "" },
-      { url: "/img/ts_plumonie_plot2.png", alt: "", caption: "" },
-      { url: "/img/ts_plumonie_plot3.png", alt: "", caption: "" },
-      { url: "/img/ts_plumonie_plot4.png", alt: "", caption: "" },
-      { url: "/img/ts_plumonie_plot5.png", alt: "", caption: "" },
-      { url: "/img/ts_plumonie_plot6.png", alt: "", caption: "" },
+      { url: "/img/ts_plumonie_plot1.webp", alt: "", caption: "" },
+      { url: "/img/ts_plumonie_plot2.webp", alt: "", caption: "" },
+      { url: "/img/ts_plumonie_plot3.webp", alt: "", caption: "" },
+      { url: "/img/ts_plumonie_plot4.webp", alt: "", caption: "" },
+      { url: "/img/ts_plumonie_plot5.webp", alt: "", caption: "" },
+      { url: "/img/ts_plumonie_plot6.webp", alt: "", caption: "" },
     ],
 
     contact: {
@@ -885,12 +1114,12 @@ export const achievementsData = [
     },
 
     images: [
-      { url: "/img/sondage_loisir_immig_plot 1.png", alt: "", caption: "" },
-      { url: "/img/sondage_loisir_immig_plot 2.png", alt: "", caption: "" },
-      { url: "/img/sondage_loisir_immig_plot 3.png", alt: "", caption: "" },
-      { url: "/img/sondage_loisir_immig_plot 4.png", alt: "", caption: "" },
-      { url: "/img/sondage_loisir_immig_plot 5.png", alt: "", caption: "" },
-      { url: "/img/sondage_loisir_immig_plot 6.png", alt: "", caption: "" },
+      { url: "/img/sondage_loisir_immig_plot_1.webp", alt: "", caption: "" },
+      { url: "/img/sondage_loisir_immig_plot_2.webp", alt: "", caption: "" },
+      { url: "/img/sondage_loisir_immig_plot_3.webp", alt: "", caption: "" },
+      { url: "/img/sondage_loisir_immig_plot_4.webp", alt: "", caption: "" },
+      { url: "/img/sondage_loisir_immig_plot_5.webp", alt: "", caption: "" },
+      { url: "/img/sondage_loisir_immig_plot_6.webp", alt: "", caption: "" },
     ],
 
     contact: {
@@ -971,10 +1200,10 @@ export const achievementsData = [
     },
 
     images: [
-      { url: "/img/breaking1.png", alt: "", caption: "" },
-      { url: "/img/breaking2.png", alt: "", caption: "" },
-      { url: "/img/breaking3.png", alt: "", caption: "" },
-      { url: "/img/breaking4.png", alt: "", caption: "" },
+      { url: "/img/breaking1.webp", alt: "", caption: "" },
+      { url: "/img/breaking2.webp", alt: "", caption: "" },
+      { url: "/img/breaking3.webp", alt: "", caption: "" },
+      { url: "/img/breaking4.webp", alt: "", caption: "" },
     ],
 
     contact: {
@@ -1063,12 +1292,12 @@ export const achievementsData = [
     },
 
     images: [
-      { url: "/img/spam_class_dist.png", alt: "Distribution Ham vs Spam", caption: "Déséquilibre des classes initial" },
-      { url: "/img/spam_top_words.png", alt: "Mots fréquents", caption: "Analyse fréquentielle du corpus" },
-      { url: "/img/spam_msg_length.png", alt: "Longueur des messages", caption: "Corrélation longueur/spam" },
-      { url: "/img/spam_pca_vis.png", alt: "Visualisation PCA", caption: "Séparation des clusters en 2D" },
-      { url: "/img/spam_roc_curve.png", alt: "Courbe ROC", caption: "Performance (AUC = 1.00)" },
-      { url: "/img/spam_confusion_matrix.png", alt: "Matrice de confusion", caption: "Analyse fine des erreurs" },
+      { url: "/img/spam_class_dist.webp", alt: "Distribution Ham vs Spam", caption: "Déséquilibre des classes initial" },
+      { url: "/img/spam_top_words.webp", alt: "Mots fréquents", caption: "Analyse fréquentielle du corpus" },
+      { url: "/img/spam_msg_length.webp", alt: "Longueur des messages", caption: "Corrélation longueur/spam" },
+      { url: "/img/spam_pca_vis.webp", alt: "Visualisation PCA", caption: "Séparation des clusters en 2D" },
+      { url: "/img/spam_roc_curve.webp", alt: "Courbe ROC", caption: "Performance (AUC = 1.00)" },
+      { url: "/img/spam_confusion_matrix.webp", alt: "Matrice de confusion", caption: "Analyse fine des erreurs" },
     ],
 
     contact: {
@@ -1146,11 +1375,11 @@ export const achievementsData = [
     },
 
     images: [
-      { url: "/img/car_price_dist.png", alt: "Distribution des prix", caption: "Asymétrie initiale" },
-      { url: "/img/car_scatter_raw.png", alt: "Nuage brut", caption: "Relation curviligne Enginesize / Price" },
-      { url: "/img/car_scatter_log.png", alt: "Nuage log", caption: "Linéarisation après transformation" },
-      { url: "/img/car_cost_history.png", alt: "Descente de gradient", caption: "Convergence de la fonction de coût" },
-      { url: "/img/car_reg_fit.png", alt: "Régression finale", caption: "Ajustement du modèle" },
+      { url: "/img/car_price_dist.webp", alt: "Distribution des prix", caption: "Asymétrie initiale" },
+      { url: "/img/car_scatter_raw.webp", alt: "Nuage brut", caption: "Relation curviligne Enginesize / Price" },
+      { url: "/img/car_scatter_log.webp", alt: "Nuage log", caption: "Linéarisation après transformation" },
+      { url: "/img/car_cost_history.webp", alt: "Descente de gradient", caption: "Convergence de la fonction de coût" },
+      { url: "/img/car_reg_fit.webp", alt: "Régression finale", caption: "Ajustement du modèle" },
     ],
 
     contact: {
