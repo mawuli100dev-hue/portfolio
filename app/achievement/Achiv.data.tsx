@@ -124,7 +124,7 @@ export const achievementsData = [
 
         contact: {
             nom: "Projet personnel - données publiques",
-            projectLink: "https://drive.google.com/drive/folders/1EQN5EOG4IFW_QjQKD4Or6Sz6LZah15_z?usp=sharing",
+            projectLink: "http://github.com/mawuli100dev-hue/spirit_digger",
             poste: "NLP & analyse du renseignement",
             email: "contact@monportfolio.com",
             telephone: "Sur demande",
@@ -234,7 +234,7 @@ export const achievementsData = [
 
         contact: {
             nom: "Projet personnel - développement indépendant",
-            projectLink: "https://drive.google.com/drive/folders/1EFdeOu23vmt9oy-gunEPF0C1ySC9Ay8y?usp=sharing",
+            projectLink: "http://github.com/mawuli100dev-hue/God-Eye",
             poste: "Computer vision & télédétection",
             email: "contact@monportfolio.com",
             telephone: "Sur demande",
